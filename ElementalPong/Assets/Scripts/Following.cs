@@ -32,8 +32,6 @@ public class Following : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, newPosition,
             movementSpeed * Time.deltaTime);
-
-
         }
     }
 }
