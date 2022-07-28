@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public float movementSpeed;
+    public int score;
+    public List<Sprite> elementalSprites;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        elementalSprites = new List<Sprite>();
     }
 }
