@@ -139,8 +139,12 @@ public class Ball : MonoBehaviour
                 //Debug.Log("air");
                 break;
             case "Fire":
+                // reset the elemental force, it won't be used here
+                xSpeed = 0.0f;
+                ySpeed = 0.0f;
+                xDirection = 0.0f;
+                yDirection = 0.0f;
                 // FIXME: double collision detection
-                // FIXME: why does theball slow down?
                 // if normal interaction, crack
                 if (state == BallStates.WHOLE){
                     state = BallStates.CRACKED;
