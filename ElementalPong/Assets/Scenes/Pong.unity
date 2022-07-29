@@ -153,6 +153,7 @@ Transform:
   m_Children:
   - {fileID: 710991240}
   - {fileID: 1421749306}
+  - {fileID: 1316003528}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -366,8 +367,8 @@ GameObject:
   - component: {fileID: 243075782}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: P2Goal
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -650,8 +651,8 @@ GameObject:
   - component: {fileID: 562621265}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_TagString: P1Goal
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -924,6 +925,7 @@ MonoBehaviour:
   spawnLocations:
   - {fileID: 710991240}
   - {fileID: 1421749306}
+  game: {fileID: 1189188751}
 --- !u!1 &710991239
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +971,7 @@ GameObject:
   - component: {fileID: 804600979}
   m_Layer: 0
   m_Name: BottomWall
-  m_TagString: Untagged
+  m_TagString: BottomWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1093,7 +1095,7 @@ GameObject:
   m_Layer: 0
   m_Name: Water paddle p1
   m_TagString: Water
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1248,6 +1250,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1037429177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2970434019287269442, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
 --- !u!1 &1065786104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1423,7 @@ GameObject:
   m_Layer: 0
   m_Name: Air paddle p1
   m_TagString: Air
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1515,9 +1574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a05fac519e54bec801a1c76cd17683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1654318476}
-  player1Paddle: {fileID: 1678621906}
-  player2Paddle: {fileID: 45739353}
+  ballPosition: {fileID: 1316003528}
   player1ScoreText: {fileID: 2126424570}
   player2ScoreText: {fileID: 1346600192}
 --- !u!4 &1189188752
@@ -1534,6 +1591,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1316003527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1316003528}
+  m_Layer: 0
+  m_Name: BallLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316003528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316003527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 24855640}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1319652823
 GameObject:
@@ -2074,7 +2162,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766a32e8bd6dc4629a140f3b0d853a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  initialSpeed: 200
+  xSpeed: 0
+  ySpeed: 0
+  xDirection: 0
+  yDirection: 0
+  state: 0
+  waterSpeedDeduction: 100
+  earthSpeedAddition: 100
+  airSpeedAddition: 150
+  whoLastHit: 0
 --- !u!1 &1678621901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2251,7 +2348,7 @@ GameObject:
   - component: {fileID: 1693765654}
   m_Layer: 0
   m_Name: TopWall
-  m_TagString: Untagged
+  m_TagString: TopWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

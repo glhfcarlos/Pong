@@ -16,7 +16,7 @@ public class PaddleUnit : MonoBehaviour
     public List<Sprite> elementalSprites;
 
     private float currentSpeed;
-    private Vector2 currentVelocity;
+    private Vector3 currentVelocity;
     private Rigidbody2D rb;
     
     // Awake is called
@@ -25,7 +25,7 @@ public class PaddleUnit : MonoBehaviour
         transform.position = startPosition;
         direction = 1.0f;
         currentSpeed = defaultSpeed;
-        currentVelocity = Vector2.zero;
+        currentVelocity = Vector3.zero;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -35,6 +35,12 @@ public class PaddleUnit : MonoBehaviour
         // applies force
         rb.AddForce(currentVelocity);
         Debug.Log(currentVelocity);
+    }
+
+    // resets position
+    public void ResetPosition(){
+        rb.position = startPosition;
+        rb.velocity = Vector3.zero;
     }
 
     // returns the current speed of the paddle
@@ -68,6 +74,23 @@ public class PaddleUnit : MonoBehaviour
     public void ResetCurrentVelocity(){
         //currentVelocity = Vector2.zero;
         direction = 0;
+        return;
+    }
+
+    /*
+        This is a function so that audio and animation and VFX
+        can be played here as well if needed.
+    */
+    public void AddToScore(){
+        score++;
+        return;
+    }
+    /*
+        This is a function so that audio and animation and VFX
+        can be played here as well if needed.
+    */
+    public void DeductFromScore(){
+        score--;
         return;
     }
 }
