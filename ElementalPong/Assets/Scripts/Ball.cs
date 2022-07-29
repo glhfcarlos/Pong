@@ -45,7 +45,7 @@ public class Ball : MonoBehaviour
     {
         ResetPosition();
         AddStartingForce();
-        Debug.Log(_rigidbody.velocity);
+        //Debug.Log(_rigidbody.velocity);
     }
 
     void AddElementalForce(){
@@ -62,6 +62,14 @@ public class Ball : MonoBehaviour
         // add the force to the rigidbody
         _rigidbody.AddForce(elementalForce);
         //Debug.Log("Ball: " + elementalForce.ToString());
+    }
+
+    // handle BROKEN state
+    void HandleBrokenState(PaddleUnit paddle){
+        // deduct point
+        paddle.DeductFromScore();
+        // shatter ball (VFX)
+        // reset round
     }
 
     public void ResetPosition()
@@ -117,9 +125,7 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    // deduct point from player that broke it
-                    paddle.DeductFromScore();
-                    // FIXME: reset ball
+                    HandleBrokenState(paddle);
                     Debug.Log("broken");
                 }
                 //Debug.Log("water");
@@ -152,9 +158,7 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    // deduct point from player that broke it
-                    paddle.DeductFromScore();
-                    // FIXME: reset ball
+                    HandleBrokenState(paddle);
                     Debug.Log("broken");
                 }
                 Debug.Log("fire");

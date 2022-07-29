@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,6 +15,34 @@ public class GameManager : MonoBehaviour
     private PaddleUnit player2Paddle;
     private Ball ball;
 
+    private bool runGame;
+    private bool paused;
+
+    void Awake(){
+        runGame = false;
+        paused = false;
+    }
+
+    void Update(){
+        if (secondsLeft <= 0){
+            EndGame();
+        }else if (runGame && !paused){
+            StartCoroutine(CountDown());
+        }
+    }
+
+    IEnumerator CountDown(){
+        // stops update() from running this
+        paused = true;
+        yield return new WaitForSeconds(1);
+        // display time left
+        timerText.text = secondsLeft.ToString();
+        // decrement time left
+        secondsLeft--;
+        // enables update to run this again
+        paused = false;
+    }
+
     // allows the player manager to add the scripts when players join
     public void TrackPlayer1(PaddleUnit paddle){
         player1Paddle = paddle;
@@ -22,6 +51,8 @@ public class GameManager : MonoBehaviour
         player2Paddle = paddle;
         // spawns ball only when players have joined
         SpawnBall();
+        // start the timer
+        runGame = true;
     }
     void SpawnBall(){
         GameObject ballGO = Instantiate(ballPrefab, ballPosition.position, Quaternion.identity);
@@ -59,12 +90,15 @@ public class GameManager : MonoBehaviour
                 [ ] Player input maps should be changed to UI for this.
         */
         if (player1Paddle.score > player2Paddle.score){
-            timerText.text = "P1 Wins";
+            timerText.text = "Wizard Wins";
         }else if (player2Paddle.score > player1Paddle.score){
-            timerText.text = "P2 Wins";
+            timerText.text = "Thief Wins";
         }else{
             timerText.text = "Tie";
         }
+
+        // disable timer
+        runGame = false;
     }
 
     private void ResetRound()
