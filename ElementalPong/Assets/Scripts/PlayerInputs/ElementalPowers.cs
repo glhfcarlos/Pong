@@ -11,16 +11,15 @@ public class ElementalPowers : MonoBehaviour
         change tag (so ball can access it)
         access to different sprites to change object's
     */
-    public float speedFactor;
 
     private SpriteRenderer sp;
-    private Unit paddle;
+    private PaddleUnit paddle;
 
     // Start is called before the first frame update
     private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
-        paddle = GetComponent<Unit>();
+        paddle = GetComponent<PaddleUnit>();
     }
 
     /*
@@ -29,7 +28,9 @@ public class ElementalPowers : MonoBehaviour
     public void MoveUp(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("u");
-            gameObject.transform.position += new Vector3(0, paddle.GetCurrentSpeed(), 0);
+            paddle.SetDirection(1.0f);
+        }if (context.canceled){
+            paddle.ResetCurrentVelocity();
         }
     }
 
@@ -39,7 +40,9 @@ public class ElementalPowers : MonoBehaviour
     public void MoveDown(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("d");
-            gameObject.transform.position -= new Vector3(0, paddle.GetCurrentSpeed(), 0);
+            paddle.SetDirection(-1.0f);
+        }if (context.canceled){
+            paddle.ResetCurrentVelocity();
         }
     }
 
@@ -55,7 +58,7 @@ public class ElementalPowers : MonoBehaviour
             // change sprite to earth
             sp.sprite = paddle.elementalSprites[0];
             // FIXME: decrease speed
-            paddle.SetCurrentSpeed(-paddle.speedChange);
+            paddle.SetCurrentSpeed(paddle.earthSpeed);
         }
     }
 
@@ -71,7 +74,7 @@ public class ElementalPowers : MonoBehaviour
             // change sprite to water
             sp.sprite = paddle.elementalSprites[1];
             // FIXME: increase speed
-            paddle.SetCurrentSpeed(paddle.speedChange);
+            paddle.SetCurrentSpeed(paddle.waterSpeed);
         }
     }
 
@@ -87,7 +90,7 @@ public class ElementalPowers : MonoBehaviour
             // change sprite to air
             sp.sprite = paddle.elementalSprites[2];
             // change speed to default
-            paddle.SetCurrentSpeed(paddle.movementSpeed);
+            paddle.SetCurrentSpeed(paddle.defaultSpeed);
         }
     }
 
@@ -103,7 +106,7 @@ public class ElementalPowers : MonoBehaviour
             // change sprite to fire
             sp.sprite = paddle.elementalSprites[3];
             // change speed to default
-            paddle.SetCurrentSpeed(paddle.movementSpeed);
+            paddle.SetCurrentSpeed(paddle.defaultSpeed);
         }
     }
 }

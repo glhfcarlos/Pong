@@ -11,8 +11,8 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("Player Input ID: " + playerInput.playerIndex.ToString());
 
         // Set the player ID, add one to the index to start at Player 1
-        playerInput.gameObject.GetComponent<Unit>().playerID = playerInput.playerIndex + 1;
+        playerInput.gameObject.GetComponent<PaddleUnit>().playerID = playerInput.playerIndex + 1;
         // Set the start spawn position of the player using the location at the associated element into the array.
-        playerInput.gameObject.GetComponent<Unit>().startPosition = spawnLocations[playerInput.playerIndex].position;
+        playerInput.gameObject.GetComponent<PaddleUnit>().startPosition = spawnLocations[playerInput.playerIndex].position;
     }
 }
