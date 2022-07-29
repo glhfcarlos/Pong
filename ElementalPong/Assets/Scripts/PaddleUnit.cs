@@ -70,4 +70,21 @@ public class PaddleUnit : MonoBehaviour
         direction = 0;
         return;
     }
+
+    /*
+        This is a function so that audio and animation and VFX
+        can be played here as well if needed.
+    */
+    public void AddToScore(){
+        score++;
+        return;
+    }
+    /*
+        This is a function so that audio and animation and VFX
+        can be played here as well if needed.
+    */
+    public void DeductFromScore(){
+        score--;
+        return;
+    }
 }

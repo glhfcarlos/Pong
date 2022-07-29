@@ -9,6 +9,10 @@ TagManager:
   - Water
   - Air
   - Fire
+  - P1Goal
+  - P2Goal
+  - TopWall
+  - BottomWall
   layers:
   - Default
   - TransparentFX

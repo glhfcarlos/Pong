@@ -13,11 +13,11 @@ public class ReactiveBall : MonoBehaviour
     public BallStates state;
 
     // the amount to add when collide with water paddle
-    public float waterSpeed;
+    public float waterSpeedDeduction;
     // the amount to subtract when collide with earth paddle
-    public float earthSpeed;
+    public float earthSpeedAddition;
     // the amount to add in the x-direction when collide with air paddle
-    public float airSpeed;
+    public float airSpeedAddition;
 
     /*
         This keeps track of whole hit the ball.
@@ -43,9 +43,16 @@ public class ReactiveBall : MonoBehaviour
         rb.AddForce(currentVelocity);
     }
 
-    }
-
     void OnCollisionEnter2D(Collision2D col){
+        bool applyPaddleDirection = true;
+
+        // FIXME: account for collision with walls
+        // if ball collides with goal
+        if ((col.gameObject.tag == "P1Goal") || (col.gameObject.tag == "P2Goal")){
+            // don't apply because not colliding with paddle
+            applyPaddleDirection = false;
+        }
+
         // save who hit the ball
         PaddleUnit paddle = col.gameObject.GetComponent<PaddleUnit>();
         if (paddle.playerID == 1){
@@ -57,12 +64,36 @@ public class ReactiveBall : MonoBehaviour
         // check tag on paddle
         switch(col.gameObject.tag){
             case "Earth":
+                // increase speed
+                xSpeed += earthSpeedAddition;
+                ySpeed += earthSpeedAddition;
+                // reverse x direction
+                xDirection *= -1;
                 break;
             case "Water":
+                if (state == BallStates.WHOLE){
+                    // decrease speed (WARNING: this will allow ball to have negative speed)
+                    xSpeed -= waterSpeedDeduction;
+                    ySpeed -= waterSpeedDeduction;
+                }else if (state == BallStates.CRACKED){
+                    state = BallStates.BROKEN;
+                    // deduct point from the player that broke it
+                    paddle.DeductFromScore();
+                    // FIXME: break ball, pause, then respawn it
+                }
+                // reverse x direction
+                xDirection *= -1;
                 break;
-            case "Air":
-                // removes y movement, but keeps x movement
-                currentVelocity *= new Vector2(1.0f, 0.0f);
+            case "Air": // a spike
+                // removes y movement
+                ySpeed = 0.0f;
+                yDirection = 0.0f;
+                // add  air speed to x speed
+                xSpeed += airSpeedAddition;
+                // don't apply paddle directiont to keep the straight shot
+                applyPaddleDirection = false;
+                // reverse x direction
+                xDirection *= -1;
                 break;
             case "Fire":
                 // if whole, change state to cracked
@@ -72,17 +103,20 @@ public class ReactiveBall : MonoBehaviour
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
                     // deduct point from the player that broke it
-                    paddle.score--;
+                    paddle.DeductFromScore();
                     // FIXME: break ball, pause, then respawn it
                 }
+                // reverse x direction
+                xDirection *= -1;
                 break;
             default:
                 // do nothing
                 break;
         }
 
-        // FIXME: reverse x direction
-        xDirection += -1;
+        // FIXME: apply paddle movement direction to ball
+        if (applyPaddleDirection){
+        }
     }
 
 }
