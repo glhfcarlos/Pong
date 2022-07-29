@@ -139,7 +139,7 @@ public class Ball : MonoBehaviour
                 I saw that the paddle's speed is 10, while the ball's speed is 200.
             */
             // add paddle's y speed to ball's (include affect of paddle's direction)
-            ySpeed += paddle.ySpeed;
+            ySpeed += paddle.defaultSpeed;
         }
     }
 
