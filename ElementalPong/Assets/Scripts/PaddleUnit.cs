@@ -34,7 +34,7 @@ public class PaddleUnit : MonoBehaviour
         currentVelocity.y = direction * currentSpeed;
         // applies force
         rb.AddForce(currentVelocity);
-        Debug.Log(currentVelocity);
+        //Debug.Log(currentVelocity);
     }
 
     // resets position

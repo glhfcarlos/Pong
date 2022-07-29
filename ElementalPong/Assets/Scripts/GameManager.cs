@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Text player1ScoreText;
     public Text player2ScoreText;
     public Text timerText;
+    public GameObject ballPrefab;
 
     private PaddleUnit player1Paddle;
     private PaddleUnit player2Paddle;
@@ -23,7 +24,8 @@ public class GameManager : MonoBehaviour
         SpawnBall();
     }
     void SpawnBall(){
-        ball = Instantiate(ball, ballPosition.position, Quaternion.identity);
+        GameObject ballGO = Instantiate(ballPrefab, ballPosition.position, Quaternion.identity);
+        ball = ballGO.GetComponent<Ball>();
     }
 
     public void Player1Scores()
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
         this.player1Paddle.ResetPosition();
         this.player2Paddle.ResetPosition();
         this.ball.ResetPosition();
+        // FIXME: add pause here to give players time to get their bearings
         this.ball.AddStartingForce();
     }
 }
