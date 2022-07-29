@@ -28,7 +28,7 @@ public class ElementalPowers : MonoBehaviour
     */
     public void MoveUp(InputAction.CallbackContext context){
         if (context.performed){
-            //Debug.Log("u");
+            Debug.Log("u");
             gameObject.transform.position += new Vector3(0, paddle.GetCurrentSpeed(), 0);
         }
     }
@@ -38,7 +38,7 @@ public class ElementalPowers : MonoBehaviour
     */
     public void MoveDown(InputAction.CallbackContext context){
         if (context.performed){
-            //Debug.Log("d");
+            Debug.Log("d");
             gameObject.transform.position -= new Vector3(0, paddle.GetCurrentSpeed(), 0);
         }
     }
@@ -49,7 +49,7 @@ public class ElementalPowers : MonoBehaviour
     */
     public void EquipEarth(InputAction.CallbackContext context){
         if (context.performed){
-            //Debug.Log("e");
+            Debug.Log("e");
             // change tag
             gameObject.tag = "Earth";
             // change sprite to earth
@@ -65,7 +65,7 @@ public class ElementalPowers : MonoBehaviour
     */
     public void EquipWater(InputAction.CallbackContext context){
         if (context.performed){
-            //Debug.Log("w");
+            Debug.Log("w");
             // change tag
             gameObject.tag = "Water";
             // change sprite to water
@@ -81,7 +81,7 @@ public class ElementalPowers : MonoBehaviour
     */
     public void EquipAir(InputAction.CallbackContext context){
         if (context.performed){
-            //Debug.Log("a");
+            Debug.Log("a");
             // change tag
             gameObject.tag = "Air";
             // change sprite to air
@@ -97,7 +97,7 @@ public class ElementalPowers : MonoBehaviour
     */
     public void EquipFire(InputAction.CallbackContext context){
         if (context.performed){
-            //Debug.Log("f");
+            Debug.Log("f");
             // change tag
             gameObject.tag = "Fire";
             // change sprite to fire

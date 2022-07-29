@@ -5,26 +5,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Transform player1Location;
-    public Transform player2Location;
+    public Transform[] spawnLocations;
 
-    private PlayerInputManager manager;
+    void OnPlayerJoined(PlayerInput playerInput){
+        Debug.Log("Player Input ID: " + playerInput.playerIndex.ToString());
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        manager = GetComponent<PlayerInputManager>();    
+        // Set the player ID, add one to the index to start at Player 1
+        playerInput.gameObject.GetComponent<Unit>().playerID = playerInput.playerIndex + 1;
+        // Set the start spawn position of the player using the location at the associated element into the array.
+        playerInput.gameObject.GetComponent<Unit>().startPosition = spawnLocations[playerInput.playerIndex].position;
     }
-
-    /*
-        When the first player joins, spawn them on the left side,
-        when the second player joins, spawn them on the right
-        side.
-    */
-    void HandlePlayerJoin(){
-        Debug.Log(manager.playerCount);
-    }
-    /*
-        When a player leaves, pause game.
-    */
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    // for the player manager
+    public int playerID;
+    public Vector3 startPosition;
+
     public float movementSpeed; // vertical movement only
     public float speedChange; // for earth and water power
     public int score;
@@ -14,6 +18,7 @@ public class Unit : MonoBehaviour
     // Awake is called
     void Awake()
     {
+        transform.position = startPosition;
         currentSpeed = movementSpeed;
     }
 
