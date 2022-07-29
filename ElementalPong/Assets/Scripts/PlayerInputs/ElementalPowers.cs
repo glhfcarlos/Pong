@@ -15,7 +15,7 @@ public class ElementalPowers : MonoBehaviour
     private Unit paddle;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         paddle = GetComponent<Unit>();
@@ -24,7 +24,7 @@ public class ElementalPowers : MonoBehaviour
     /*
         move up.
     */
-    void MoveUp(InputAction.CallbackContext context){
+    public void MoveUp(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("u");
         }
@@ -33,7 +33,7 @@ public class ElementalPowers : MonoBehaviour
     /*
         move down.
     */
-    void MoveDown(InputAction.CallbackContext context){
+    public void MoveDown(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("d");
         }
@@ -43,7 +43,7 @@ public class ElementalPowers : MonoBehaviour
         When button is pressed (start) and power isn't already equipped, 
         change power to earth.
     */
-    void EquipEarth(InputAction.CallbackContext context){
+    public void EquipEarth(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("e");
         }
@@ -53,7 +53,7 @@ public class ElementalPowers : MonoBehaviour
         When button is pressed (start) and power isn't already equipped, 
         change power to water.
     */
-    void EquipWater(InputAction.CallbackContext context){
+    public void EquipWater(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("w");
         }
@@ -63,7 +63,7 @@ public class ElementalPowers : MonoBehaviour
         When button is pressed (start) and power isn't already equipped, 
         change power to air.
     */
-    void EquipAir(InputAction.CallbackContext context){
+    public void EquipAir(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("a");
         }
@@ -73,7 +73,7 @@ public class ElementalPowers : MonoBehaviour
         When button is pressed (start) and power isn't already equipped, 
         change power to fire.
     */
-    void EquipFire(InputAction.CallbackContext context){
+    public void EquipFire(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("f");
         }
