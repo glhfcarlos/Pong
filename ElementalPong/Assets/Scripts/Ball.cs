@@ -24,6 +24,30 @@ public class Ball : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
     }
 
+        private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Air"))
+        {
+            
+        }
+        //Air: straight line to the other side
+        else if (other.gameObject.CompareTag("Earth"))
+        {
+
+        }
+        //Earth: Strenght of force is increases
+        else if (other.gameObject.CompareTag("Fire"))
+        {
+
+        }
+        //Fire: Destory Ball and restart
+        else if (other.gameObject.CompareTag("Water"))
+        {
+
+        }
+        //Water: Unsure
+    }
+
     public void AddStartingForce()
     {
         float x = Random.value < 0.5f ? -1.0f : 1.0f;
