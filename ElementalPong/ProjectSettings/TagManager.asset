@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Starter
   - Earth
+  - Water
   - Air
   - Fire
-  - Water
   layers:
   - Default
   - TransparentFX

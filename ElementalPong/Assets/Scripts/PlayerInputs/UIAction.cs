@@ -14,30 +14,30 @@ public class UIAction : MonoBehaviour
     /*
         scroll upwards through options.
     */
-    void ScrollUp(InputAction.CallbackContext context){
+    public void ScrollUp(InputAction.CallbackContext context){
     }
 
     /*
         scroll downwards through options.
     */
-    void ScrollDown(InputAction.CallbackContext context){
+    public void ScrollDown(InputAction.CallbackContext context){
     }
 
     /*
         scroll leftwards through options.
     */
-    void ScrollLeft(InputAction.CallbackContext context){
+    public void ScrollLeft(InputAction.CallbackContext context){
     }
 
     /*
         scroll rightwards through options.
     */
-    void ScrollRight(InputAction.CallbackContext context){
+    public void ScrollRight(InputAction.CallbackContext context){
     }
 
     /*
         select an option.
     */
-    void SelectOption(InputAction.CallbackContext context){
+    public void SelectOption(InputAction.CallbackContext context){
     }
 }
