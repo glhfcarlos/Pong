@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
         ResetRound();
     }
 
+    // FIXME: add code to deal with broken ball
+
     private void ResetRound()
     {
         this.player1Paddle.ResetPosition();

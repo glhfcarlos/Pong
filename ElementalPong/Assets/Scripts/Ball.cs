@@ -48,6 +48,9 @@ public class Ball : MonoBehaviour
     {
         _rigidbody.position = Vector3.zero;
         _rigidbody.velocity = Vector3.zero;
+        // reseting states
+        state = BallStates.WHOLE;
+        whoLastHit = LastContact.NONE;
     }
 
     private void OnCollisionEnter(Collision other)
