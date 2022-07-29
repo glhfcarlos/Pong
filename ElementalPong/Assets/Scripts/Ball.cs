@@ -107,12 +107,21 @@ public class Ball : MonoBehaviour
                 break;
             case "Water":
                 // if normal interaction, decrease speed
-                xSpeed = waterSpeedDeduction;
-                ySpeed = waterSpeedDeduction;
-                // set x direction as opposite of x direction before collision
-                xDirection = Mathf.Sign(_rigidbody.velocity.x) * -1;
-                // set y direction to directon the ball is already in
-                yDirection = Mathf.Sign(_rigidbody.velocity.y);
+                if (state == BallStates.WHOLE){
+                    xSpeed = waterSpeedDeduction;
+                    ySpeed = waterSpeedDeduction;
+                    // set x direction as opposite of x direction before collision
+                    xDirection = Mathf.Sign(_rigidbody.velocity.x) * -1;
+                    // set y direction to directon the ball is already in
+                    yDirection = Mathf.Sign(_rigidbody.velocity.y);
+                // if interacting as cracked ball, break
+                }else if (state == BallStates.CRACKED){
+                    state = BallStates.BROKEN;
+                    // deduct point from player that broke it
+                    paddle.DeductFromScore();
+                    // FIXME: reset ball
+                    Debug.Log("broken");
+                }
                 //Debug.Log("water");
                 break;
             case "Air": // a spike
@@ -130,9 +139,13 @@ public class Ball : MonoBehaviour
                 //Debug.Log("air");
                 break;
             case "Fire":
+                // FIXME: double collision detection
+                // FIXME: why does theball slow down?
+                // if normal interaction, crack
                 if (state == BallStates.WHOLE){
                     state = BallStates.CRACKED;
                     Debug.Log("cracked");
+                // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
                     // deduct point from player that broke it
