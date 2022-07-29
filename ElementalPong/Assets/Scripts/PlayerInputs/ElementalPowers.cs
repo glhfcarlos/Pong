@@ -29,7 +29,7 @@ public class ElementalPowers : MonoBehaviour
     public void MoveUp(InputAction.CallbackContext context){
         if (context.performed){
             //Debug.Log("u");
-            gameObject.transform.position += new Vector3(0, paddle.movementSpeed, 0);
+            gameObject.transform.position += new Vector3(0, paddle.GetCurrentSpeed(), 0);
         }
     }
 
@@ -39,7 +39,7 @@ public class ElementalPowers : MonoBehaviour
     public void MoveDown(InputAction.CallbackContext context){
         if (context.performed){
             //Debug.Log("d");
-            gameObject.transform.position -= new Vector3(0, paddle.movementSpeed, 0);
+            gameObject.transform.position -= new Vector3(0, paddle.GetCurrentSpeed(), 0);
         }
     }
 
@@ -54,7 +54,8 @@ public class ElementalPowers : MonoBehaviour
             gameObject.tag = "Earth";
             // change sprite to earth
             sp.sprite = paddle.elementalSprites[0];
-            // FIXME: change speed
+            // FIXME: decrease speed
+            paddle.SetCurrentSpeed(-paddle.speedChange);
         }
     }
 
@@ -69,7 +70,8 @@ public class ElementalPowers : MonoBehaviour
             gameObject.tag = "Water";
             // change sprite to water
             sp.sprite = paddle.elementalSprites[1];
-            // FIXME: change speed
+            // FIXME: increase speed
+            paddle.SetCurrentSpeed(paddle.speedChange);
         }
     }
 
@@ -84,6 +86,8 @@ public class ElementalPowers : MonoBehaviour
             gameObject.tag = "Air";
             // change sprite to air
             sp.sprite = paddle.elementalSprites[2];
+            // change speed to default
+            paddle.SetCurrentSpeed(paddle.movementSpeed);
         }
     }
 
@@ -98,6 +102,8 @@ public class ElementalPowers : MonoBehaviour
             gameObject.tag = "Fire";
             // change sprite to fire
             sp.sprite = paddle.elementalSprites[3];
+            // change speed to default
+            paddle.SetCurrentSpeed(paddle.movementSpeed);
         }
     }
 }
