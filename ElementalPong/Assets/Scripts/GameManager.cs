@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         SpawnBall();
     }
     void SpawnBall(){
-        Instantiate(ball, ballPosition.position, Quaternion.identity);
+        ball = Instantiate(ball, ballPosition.position, Quaternion.identity);
     }
 
     public void Player1Scores()
