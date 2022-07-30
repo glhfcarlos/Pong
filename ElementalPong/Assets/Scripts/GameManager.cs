@@ -26,10 +26,17 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
+        // handle timer
         if (secondsLeft <= 0){
             EndGame();
         }else if (runGame && !paused){
             StartCoroutine(CountDown());
+        }
+        // handle broken ball
+        if (ball != null){
+            if (ball.state == BallStates.BROKEN){
+                StartCoroutine(BrokenBall());
+            }
         }
     }
 
@@ -78,16 +85,24 @@ public class GameManager : MonoBehaviour
     }
 
     // FIXME: add code to deal with broken ball
-    public void BrokenBall(){
+    IEnumerator BrokenBall(){
         // deduct point from the player that broke it
         if (ball.whoLastHit == LastContact.P1){
             player1Paddle.DeductFromScore();
             this.player1ScoreText.text = player1Paddle.score.ToString();
+            Debug.Log("deducted from p1");
         }else if (ball.whoLastHit == LastContact.P2){
             player2Paddle.DeductFromScore();
             this.player2ScoreText.text = player2Paddle.score.ToString();
+            Debug.Log("deducted from p2");
+        }else{
+            Debug.Log("last contact is none");
         }
+        
+        // reset round
         StartCoroutine(ResetRound());
+
+        yield return new WaitForSeconds(1);
     }
 
     /*

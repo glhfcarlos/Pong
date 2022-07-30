@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BallStates { WHOLE, CRACKED, BROKEN}
-public enum LastContact {NONE, P1, P2 }
+public enum BallStates { WHOLE, CRACKED, BROKEN }
+public enum LastContact { NONE, P1, P2 }
 public class Ball : MonoBehaviour
 {
     public float initialSpeed;
@@ -115,7 +115,6 @@ public class Ball : MonoBehaviour
                 }
                 // set y direction to directon the ball is already in
                 yDirection = Mathf.Sign(_rigidbody.velocity.y);
-                //Debug.Log("earth");
                 break;
             case "Water":
                 // if normal interaction, decrease speed
@@ -129,8 +128,8 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    HandleBrokenState();
                     Debug.Log("broken");
+                    HandleBrokenState();
                 }
                 //Debug.Log("water");
                 break;
@@ -146,7 +145,6 @@ public class Ball : MonoBehaviour
                 xDirection = -1 * Mathf.Sign(_rigidbody.velocity.x);
                 // set flag
                 airForce = true;
-                //Debug.Log("air");
                 break;
             case "Fire":
                 // reset the elemental force, it won't be used here
@@ -162,10 +160,9 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    HandleBrokenState();
                     Debug.Log("broken");
+                    HandleBrokenState();
                 }
-                Debug.Log("fire");
                 break;
             default:
                 // do nothing
