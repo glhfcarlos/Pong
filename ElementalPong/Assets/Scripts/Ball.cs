@@ -68,11 +68,8 @@ public class Ball : MonoBehaviour
     }
 
     // handle BROKEN state
-    void HandleBrokenState(PaddleUnit paddle){
-        // deduct point
-        paddle.DeductFromScore();
-        // shatter ball (VFX)
-        // reset round
+    void HandleBrokenState(){
+        // FIXME: shatter ball (VFX)
     }
 
     public void StopMovement(){
@@ -132,7 +129,7 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    HandleBrokenState(paddle);
+                    HandleBrokenState();
                     Debug.Log("broken");
                 }
                 //Debug.Log("water");
@@ -165,7 +162,7 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    HandleBrokenState(paddle);
+                    HandleBrokenState();
                     Debug.Log("broken");
                 }
                 Debug.Log("fire");

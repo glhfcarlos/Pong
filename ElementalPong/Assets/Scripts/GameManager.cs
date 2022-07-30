@@ -78,6 +78,17 @@ public class GameManager : MonoBehaviour
     }
 
     // FIXME: add code to deal with broken ball
+    public void BrokenBall(){
+        // deduct point from the player that broke it
+        if (ball.whoLastHit == LastContact.P1){
+            player1Paddle.DeductFromScore();
+            this.player1ScoreText.text = player1Paddle.score.ToString();
+        }else if (ball.whoLastHit == LastContact.P2){
+            player2Paddle.DeductFromScore();
+            this.player2ScoreText.text = player2Paddle.score.ToString();
+        }
+        StartCoroutine(ResetRound());
+    }
 
     /*
         This should change the scene to the "GameOver" scene and display who won.
