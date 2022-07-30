@@ -79,8 +79,6 @@ public class GameManager : MonoBehaviour
 
     // FIXME: add code to deal with broken ball
 
-    // FIXME: add timer
-
     /*
         This should change the scene to the "GameOver" scene and display who won.
     */
