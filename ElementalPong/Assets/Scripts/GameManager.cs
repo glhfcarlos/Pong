@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     private PaddleUnit player2Paddle;
     private Ball ball;
 
+    public int resetPause;
+
     private bool runGame;
     private bool paused;
 
@@ -64,7 +66,7 @@ public class GameManager : MonoBehaviour
         player1Paddle.AddToScore();
 
         this.player1ScoreText.text = player1Paddle.score.ToString();
-        ResetRound();
+        StartCoroutine(ResetRound());
     }
 
     public void Player2Scores()
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
         player2Paddle.AddToScore();
         
         this.player2ScoreText.text = player2Paddle.score.ToString();
-        ResetRound();
+        StartCoroutine(ResetRound());
     }
 
     // FIXME: add code to deal with broken ball
@@ -87,8 +89,16 @@ public class GameManager : MonoBehaviour
             FIXME: 
                 [ ] This should change the scene to the "GameOver" scene and display who won.
                 [ ] There should be options to restart or return to start screen.
-                [ ] Player input maps should be changed to UI for this.
+                [v] Player input maps should be changed to UI for this.
+                [v] stop ball movement
         */
+        // destroy the ball
+        ball.StopMovement();
+        // switch player action maps to UI
+        player1Paddle.ChangeInputMap("UI");
+        player2Paddle.ChangeInputMap("UI");
+
+        // display who won
         if (player1Paddle.score > player2Paddle.score){
             timerText.text = "Wizard Wins";
         }else if (player2Paddle.score > player1Paddle.score){
@@ -101,12 +111,13 @@ public class GameManager : MonoBehaviour
         runGame = false;
     }
 
-    private void ResetRound()
+    IEnumerator ResetRound()
     {
         this.player1Paddle.ResetPosition();
         this.player2Paddle.ResetPosition();
         this.ball.ResetPosition();
-        // FIXME: add pause here to give players time to get their bearings
+        // add pause here to give players time to get their bearings
+        yield return new WaitForSeconds(resetPause);
         this.ball.AddStartingForce();
     }
 }

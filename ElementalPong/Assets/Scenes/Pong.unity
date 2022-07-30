@@ -1101,12 +1101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a05fac519e54bec801a1c76cd17683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsLeft: 60
+  secondsLeft: 5
   ballPosition: {fileID: 1316003528}
   player1ScoreText: {fileID: 2126424570}
   player2ScoreText: {fileID: 1346600192}
   timerText: {fileID: 667924072}
   ballPrefab: {fileID: 7389156353104026042, guid: ff100ddb4b6ce61429210edd3c448f57, type: 3}
+  resetPause: 1
 --- !u!4 &1189188752
 Transform:
   m_ObjectHideFlags: 0

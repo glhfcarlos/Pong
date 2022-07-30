@@ -27,6 +27,9 @@ public class Ball : MonoBehaviour
     
     public BallStates state;
 
+    // for teh sprites
+    public List<Sprite> ballSprites;
+
     private Rigidbody2D _rigidbody;
 
     private Vector2 elementalForce;
@@ -70,6 +73,10 @@ public class Ball : MonoBehaviour
         paddle.DeductFromScore();
         // shatter ball (VFX)
         // reset round
+    }
+
+    public void StopMovement(){
+        _rigidbody.velocity = Vector2.zero;
     }
 
     public void ResetPosition()

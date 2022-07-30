@@ -109,4 +109,11 @@ public class ElementalPowers : MonoBehaviour
             paddle.SetCurrentSpeed(paddle.defaultSpeed);
         }
     }
+
+    public void PauseGame(InputAction.CallbackContext context){
+        if (context.performed){
+            Debug.Log("pausing game");
+        }
+    }
+
 }
