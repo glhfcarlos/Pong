@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PaddleUnit : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PaddleUnit : MonoBehaviour
     private float currentSpeed;
     private Vector3 currentVelocity;
     private Rigidbody2D rb;
+
+    private PlayerInput playerInput;
     
     // Awake is called
     void Awake()
@@ -27,6 +30,7 @@ public class PaddleUnit : MonoBehaviour
         currentSpeed = defaultSpeed;
         currentVelocity = Vector3.zero;
         rb = GetComponent<Rigidbody2D>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     void FixedUpdate(){
@@ -34,7 +38,7 @@ public class PaddleUnit : MonoBehaviour
         currentVelocity.y = direction * currentSpeed;
         // applies force
         rb.AddForce(currentVelocity);
-        Debug.Log(currentVelocity);
+        //Debug.Log(currentVelocity);
     }
 
     // resets position
@@ -93,4 +97,12 @@ public class PaddleUnit : MonoBehaviour
         score--;
         return;
     }
+
+    /*
+        To switch input maps
+    */
+    public void ChangeInputMap(string toMap){
+        playerInput.SwitchCurrentActionMap(toMap);
+    }
+
 }

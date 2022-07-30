@@ -8,11 +8,11 @@ public class Ball : MonoBehaviour
 {
     public float initialSpeed;
 
+    // these values are for the elemental force vector
     public float xSpeed;
     public float ySpeed;
     public float xDirection;
     public float yDirection;
-    public BallStates state;
 
     // the amount to add when collide with water paddle
     public float waterSpeedDeduction;
@@ -20,15 +20,19 @@ public class Ball : MonoBehaviour
     public float earthSpeedAddition;
     // the amount to add in the x-direction when collide with air paddle
     public float airSpeedAddition;
+    private bool airForce;
 
-    /*
-        This keeps track of whole hit the ball.
-    */
+    //This keeps track of whole hit the ball.
     public LastContact whoLastHit;
+    
+    public BallStates state;
+
+    // for teh sprites
+    public List<Sprite> ballSprites;
 
     private Rigidbody2D _rigidbody;
 
-    private Vector3 currentVelocity;
+    private Vector2 elementalForce;
 
     private void Awake()
     {
@@ -36,12 +40,43 @@ public class Ball : MonoBehaviour
         // initial states
         state = BallStates.WHOLE;
         whoLastHit = LastContact.NONE;
+        elementalForce = Vector3.zero;
+        airForce = false;
     }
 
     private void Start()
     {
         ResetPosition();
         AddStartingForce();
+        //Debug.Log(_rigidbody.velocity);
+    }
+
+    void AddElementalForce(){
+        // setup elemental force vector
+        elementalForce.x = xDirection * xSpeed;
+        elementalForce.y = yDirection * ySpeed;
+        // FIXME: removing the y movement causes the ball to vibrate before flying off
+        if (airForce){
+            // set rigidbody y movement to zero
+            _rigidbody.velocity *= new Vector2(1.0f, 0.0f);
+            // reset flag
+            airForce = false;
+        }
+        // add the force to the rigidbody
+        _rigidbody.AddForce(elementalForce);
+        //Debug.Log("Ball: " + elementalForce.ToString());
+    }
+
+    // handle BROKEN state
+    void HandleBrokenState(PaddleUnit paddle){
+        // deduct point
+        paddle.DeductFromScore();
+        // shatter ball (VFX)
+        // reset round
+    }
+
+    public void StopMovement(){
+        _rigidbody.velocity = Vector2.zero;
     }
 
     public void ResetPosition()
@@ -53,27 +88,16 @@ public class Ball : MonoBehaviour
         whoLastHit = LastContact.NONE;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        bool applyPaddleDirection = true;
-
-        // if ball collides with goal
-        if ((other.gameObject.tag == "P1Goal") || (other.gameObject.tag == "P2Goal")){
-            // don't apply because not colliding with paddle
-            applyPaddleDirection = false;
-            // no need to run the code below
-            return;
-        }
-        
-        // if ball collided with upper/lower wall, reverse y direction
-        if ((other.gameObject.tag == "TopWall") || (other.gameObject.tag == "BottomWall")){
-            yDirection *= -1;
-            // no need to run the code below
-            return;
-        }
+        //bool applyPaddleDirection = true;
 
         // save who hit the ball
         PaddleUnit paddle = other.gameObject.GetComponent<PaddleUnit>();
+        // if it wasn't a paddle that the ball collided into
+        if (paddle == null)
+            return;
+        
         if (paddle.playerID == 1){
             whoLastHit = LastContact.P1;
         }else{
@@ -84,51 +108,76 @@ public class Ball : MonoBehaviour
         switch(other.gameObject.tag){
             case "Earth":
                 // increase speed
-                xSpeed += earthSpeedAddition;
-                ySpeed += earthSpeedAddition;
+                xSpeed = earthSpeedAddition;
+                ySpeed = earthSpeedAddition;
+                // set x direction
+                if (whoLastHit == LastContact.P1){
+                    xDirection = 1;
+                }else{
+                    xDirection = -1;
+                }
+                // set y direction to directon the ball is already in
+                yDirection = Mathf.Sign(_rigidbody.velocity.y);
+                //Debug.Log("earth");
                 break;
             case "Water":
-                // normal interaction
+                // if normal interaction, decrease speed
                 if (state == BallStates.WHOLE){
-                    // decrease speed (WARNING: this will allow ball to have negative speed)
-                    xSpeed -= waterSpeedDeduction;
-                    ySpeed -= waterSpeedDeduction;
-                // interaction as cracked ball
+                    xSpeed = waterSpeedDeduction;
+                    ySpeed = waterSpeedDeduction;
+                    // set x direction as opposite of x direction before collision
+                    xDirection = Mathf.Sign(_rigidbody.velocity.x) * -1;
+                    // set y direction to directon the ball is already in
+                    yDirection = Mathf.Sign(_rigidbody.velocity.y);
+                // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    // deduct point from the player that broke it
-                    paddle.DeductFromScore();
-                    // FIXME: break ball, pause, then respawn it
+                    HandleBrokenState(paddle);
+                    Debug.Log("broken");
                 }
+                //Debug.Log("water");
                 break;
             case "Air": // a spike
-                // removes y movement
-                ySpeed = 0.0f;
-                yDirection = 0.0f;
-                // add air speed to x speed
+                // add no y movement to elemental force
+                ySpeed = 0;
+                yDirection = 0;
+                // add rigidbody y speed to elemental force x speed
+                xSpeed = Mathf.Abs(_rigidbody.velocity.y);
+                // set elemental force x speed as air speed
                 xSpeed += airSpeedAddition;
-                // don't apply paddle direction to keep the straight shot
-                applyPaddleDirection = false;
+                // set x direction as opposite of x direction before collision
+                xDirection = -1 * Mathf.Sign(_rigidbody.velocity.x);
+                // set flag
+                airForce = true;
+                //Debug.Log("air");
                 break;
             case "Fire":
-                // normal interaction
+                // reset the elemental force, it won't be used here
+                xSpeed = 0.0f;
+                ySpeed = 0.0f;
+                xDirection = 0.0f;
+                yDirection = 0.0f;
+                // FIXME: double collision detection
+                // if normal interaction, crack
                 if (state == BallStates.WHOLE){
                     state = BallStates.CRACKED;
-                // interaction as cracked ball
+                    Debug.Log("cracked");
+                // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    // deduct point from the player that broke it
-                    paddle.DeductFromScore();
-                    // FIXME: break ball, pause, then respawn it
+                    HandleBrokenState(paddle);
+                    Debug.Log("broken");
                 }
+                Debug.Log("fire");
                 break;
             default:
                 // do nothing
                 break;
         }
 
-        // reverse x direction
-        xDirection *= -1;
+        /*
+        FIXME: is scaling needed?
+        I saw that the paddle's speed is 10, while the ball's speed is 200.
 
         // FIXME: apply paddle movement direction to ball (this only alters the y movement)
         if (applyPaddleDirection){
@@ -136,13 +185,13 @@ public class Ball : MonoBehaviour
             if (yDirection == 0){
                 yDirection = paddle.direction;
             }
-            /*
-                FIXME: is scaling needed?
-                I saw that the paddle's speed is 10, while the ball's speed is 200.
-            */
             // add paddle's y speed to ball's (include affect of paddle's direction)
             ySpeed += paddle.defaultSpeed;
         }
+
+        */
+
+        AddElementalForce();
     }
 
     // adds random direction to the ball when spawned in
@@ -152,6 +201,10 @@ public class Ball : MonoBehaviour
         float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : Random.Range(0.5f, 1.0f);
         Vector2 direction = new Vector2(x, y);
         _rigidbody.AddForce(direction * this.initialSpeed);
+        xSpeed = initialSpeed;
+        ySpeed = xSpeed;
+        xDirection = x;
+        yDirection = y;
     }
     public void AddForce(Vector2 force) 
     {
