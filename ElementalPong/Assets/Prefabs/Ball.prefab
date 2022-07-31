@@ -115,7 +115,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -146,3 +146,4 @@ MonoBehaviour:
   airSpeedAddition: 200
   whoLastHit: 0
   state: 0
+  ballSprites: []
