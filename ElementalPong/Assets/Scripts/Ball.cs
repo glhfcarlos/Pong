@@ -129,7 +129,11 @@ public class Ball : MonoBehaviour
                 // add no y movement to elemental force
                 elementalForce.y = 0.0f;
                 // set x direction as opposite of x direction before collision
-                elementalForce.x = -1 * Mathf.Sign(_rigidbody.velocity.x) * airSpeedAddition;
+                if (whoLastHit == LastContact.P1){
+                    elementalForce.x = 1 * airSpeedAddition;
+                }else{
+                    elementalForce.x = -1 * airSpeedAddition;
+                }
                 // set flag
                 airForce = true;
                 break;
