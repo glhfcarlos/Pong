@@ -37,7 +37,7 @@ public class PaddleUnit : MonoBehaviour
         currentVelocity.y = direction * currentSpeed * Time.deltaTime;
         // added movement to paddle
         gameObject.transform.position += currentVelocity;
-        Debug.Log(currentVelocity);
+        //Debug.Log(currentVelocity);
     }
 
     // collision

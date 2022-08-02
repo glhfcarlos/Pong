@@ -137,13 +137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 200
-  xSpeed: 0
-  ySpeed: 0
-  xDirection: 0
-  yDirection: 0
+  elementalForce: {x: 0, y: 0}
   waterSpeedDeduction: 100
   earthSpeedAddition: 100
-  airSpeedAddition: 200
+  airSpeedAddition: 400
   whoLastHit: 0
   state: 0
   ballSprites: []
