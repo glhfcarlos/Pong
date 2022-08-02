@@ -24,6 +24,8 @@ public class Ball : MonoBehaviour
     
     public BallStates state;
 
+    private SpriteRenderer sp;
+
     // for teh sprites
     public List<Sprite> ballSprites;
 
@@ -32,6 +34,7 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
         // initial states
         state = BallStates.WHOLE;
         whoLastHit = LastContact.NONE;
@@ -79,6 +82,7 @@ public class Ball : MonoBehaviour
         // reseting states
         state = BallStates.WHOLE;
         whoLastHit = LastContact.NONE;
+        sp.color = Color.white;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -148,6 +152,8 @@ public class Ball : MonoBehaviour
                 // if normal interaction, crack
                 if (state == BallStates.WHOLE){
                     state = BallStates.CRACKED;
+                    // FIXME: change sprite instead
+                    sp.color = Color.red;
                     Debug.Log("cracked");
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
