@@ -148,7 +148,6 @@ public class Ball : MonoBehaviour
             case "Fire":
                 // reset the elemental force, it won't be used here
                 elementalForce = Vector2.zero;
-                // FIXME: double collision detection
                 // if normal interaction, crack
                 if (state == BallStates.WHOLE){
                     state = BallStates.CRACKED;
