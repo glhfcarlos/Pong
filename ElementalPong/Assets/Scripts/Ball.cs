@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BallStates { WHOLE, CRACKED, BROKEN}
-public enum LastContact {NONE, P1, P2 }
+public enum BallStates { WHOLE, CRACKED, BROKEN }
+public enum LastContact { NONE, P1, P2 }
 public class Ball : MonoBehaviour
 {
     public float initialSpeed;
@@ -64,11 +64,8 @@ public class Ball : MonoBehaviour
     }
 
     // handle BROKEN state
-    void HandleBrokenState(PaddleUnit paddle){
-        // deduct point
-        paddle.DeductFromScore();
-        // shatter ball (VFX)
-        // reset round
+    void HandleBrokenState(){
+        // FIXME: shatter ball (VFX)
     }
 
     public void StopMovement(){
@@ -123,8 +120,8 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    HandleBrokenState(paddle);
                     Debug.Log("broken");
+                    HandleBrokenState();
                 }
                 //Debug.Log("water");
                 break;
@@ -135,7 +132,6 @@ public class Ball : MonoBehaviour
                 elementalForce.x = -1 * Mathf.Sign(_rigidbody.velocity.x) * airSpeedAddition;
                 // set flag
                 airForce = true;
-                //Debug.Log("air");
                 break;
             case "Fire":
                 // reset the elemental force, it won't be used here
@@ -148,10 +144,9 @@ public class Ball : MonoBehaviour
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
-                    HandleBrokenState(paddle);
                     Debug.Log("broken");
+                    HandleBrokenState();
                 }
-                Debug.Log("fire");
                 break;
             default:
                 // do nothing
