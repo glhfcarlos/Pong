@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        Debug.Log(_rigidbody.velocity);
+        //Debug.Log(_rigidbody.velocity);
     }
 
     void AddElementalForce(){
@@ -114,7 +114,11 @@ public class Ball : MonoBehaviour
                 // if normal interaction, decrease speed
                 if (state == BallStates.WHOLE){
                     // set x direction as opposite of x direction before collision
-                    elementalForce.x = Mathf.Sign(_rigidbody.velocity.x) * -1 * waterSpeedDeduction;
+                    if (whoLastHit == LastContact.P1){
+                        elementalForce.x = -1 * waterSpeedDeduction;
+                    }else{
+                        elementalForce.x = 1 * waterSpeedDeduction;
+                    }
                     // set y direction to directon the ball is already in
                     elementalForce.y = Mathf.Sign(_rigidbody.velocity.y) * waterSpeedDeduction;
                 // if interacting as cracked ball, break
