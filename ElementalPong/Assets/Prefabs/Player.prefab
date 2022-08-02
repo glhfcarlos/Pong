@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2970434019287269470}
   - component: {fileID: 2970434019287269468}
   - component: {fileID: 2970434019287269469}
-  - component: {fileID: 3204019354468257436}
   - component: {fileID: 6989483359000441251}
   m_Layer: 0
   m_Name: Player
@@ -105,11 +104,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: 0
   startPosition: {x: 0, y: 0, z: 0}
+  score: 0
   defaultSpeed: 10
   earthSpeed: 5
   waterSpeed: 15
   direction: 0
-  score: 0
   elementalSprites:
   - {fileID: 21300000, guid: ee439cd0f97144804b7aad371552490b, type: 3}
   - {fileID: 21300000, guid: c0d1f21bca0d342b8b4b94aece764141, type: 3}
@@ -337,27 +336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d312433e85faf42a9424a8c809ecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &3204019354468257436
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2970434019287269442}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.5
-  m_LinearDrag: 0.5
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!61 &6989483359000441251
 BoxCollider2D:
   m_ObjectHideFlags: 0

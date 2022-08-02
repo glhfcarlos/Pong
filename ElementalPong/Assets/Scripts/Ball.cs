@@ -9,10 +9,7 @@ public class Ball : MonoBehaviour
     public float initialSpeed;
 
     // these values are for the elemental force vector
-    public float xSpeed;
-    public float ySpeed;
-    public float xDirection;
-    public float yDirection;
+    public Vector2 elementalForce;
 
     // the amount to add when collide with water paddle
     public float waterSpeedDeduction;
@@ -32,8 +29,6 @@ public class Ball : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
 
-    private Vector2 elementalForce;
-
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -51,10 +46,11 @@ public class Ball : MonoBehaviour
         //Debug.Log(_rigidbody.velocity);
     }
 
+    private void FixedUpdate(){
+        Debug.Log(_rigidbody.velocity);
+    }
+
     void AddElementalForce(){
-        // setup elemental force vector
-        elementalForce.x = xDirection * xSpeed;
-        elementalForce.y = yDirection * ySpeed;
         // FIXME: removing the y movement causes the ball to vibrate before flying off
         if (airForce){
             // set rigidbody y movement to zero
@@ -104,27 +100,23 @@ public class Ball : MonoBehaviour
         // check tag on paddle
         switch(other.gameObject.tag){
             case "Earth":
-                // increase speed
-                xSpeed = earthSpeedAddition;
-                ySpeed = earthSpeedAddition;
                 // set x direction
                 if (whoLastHit == LastContact.P1){
-                    xDirection = 1;
+                    elementalForce.x = 1 * earthSpeedAddition;
                 }else{
-                    xDirection = -1;
+                    elementalForce.x = -1 * earthSpeedAddition;
                 }
                 // set y direction to directon the ball is already in
-                yDirection = Mathf.Sign(_rigidbody.velocity.y);
+                elementalForce.y = Mathf.Sign(_rigidbody.velocity.y) * earthSpeedAddition;
+                //Debug.Log("earth");
                 break;
             case "Water":
                 // if normal interaction, decrease speed
                 if (state == BallStates.WHOLE){
-                    xSpeed = waterSpeedDeduction;
-                    ySpeed = waterSpeedDeduction;
                     // set x direction as opposite of x direction before collision
-                    xDirection = Mathf.Sign(_rigidbody.velocity.x) * -1;
+                    elementalForce.x = Mathf.Sign(_rigidbody.velocity.x) * -1 * waterSpeedDeduction;
                     // set y direction to directon the ball is already in
-                    yDirection = Mathf.Sign(_rigidbody.velocity.y);
+                    elementalForce.y = Mathf.Sign(_rigidbody.velocity.y) * waterSpeedDeduction;
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
                     state = BallStates.BROKEN;
@@ -135,23 +127,15 @@ public class Ball : MonoBehaviour
                 break;
             case "Air": // a spike
                 // add no y movement to elemental force
-                ySpeed = 0;
-                yDirection = 0;
-                // add rigidbody y speed to elemental force x speed
-                xSpeed = Mathf.Abs(_rigidbody.velocity.y);
-                // set elemental force x speed as air speed
-                xSpeed += airSpeedAddition;
+                elementalForce.y = 0.0f;
                 // set x direction as opposite of x direction before collision
-                xDirection = -1 * Mathf.Sign(_rigidbody.velocity.x);
+                elementalForce.x = -1 * Mathf.Sign(_rigidbody.velocity.x) * airSpeedAddition;
                 // set flag
                 airForce = true;
                 break;
             case "Fire":
                 // reset the elemental force, it won't be used here
-                xSpeed = 0.0f;
-                ySpeed = 0.0f;
-                xDirection = 0.0f;
-                yDirection = 0.0f;
+                elementalForce = Vector2.zero;
                 // FIXME: double collision detection
                 // if normal interaction, crack
                 if (state == BallStates.WHOLE){
@@ -195,10 +179,7 @@ public class Ball : MonoBehaviour
         float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) : Random.Range(0.5f, 1.0f);
         Vector2 direction = new Vector2(x, y);
         _rigidbody.AddForce(direction * this.initialSpeed);
-        xSpeed = initialSpeed;
-        ySpeed = xSpeed;
-        xDirection = x;
-        yDirection = y;
+        elementalForce = new Vector2(initialSpeed * x, initialSpeed * y);
     }
     public void AddForce(Vector2 force) 
     {
