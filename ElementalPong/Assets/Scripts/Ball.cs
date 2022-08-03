@@ -24,6 +24,8 @@ public class Ball : MonoBehaviour
     
     public BallStates state;
 
+    private SpriteRenderer sp;
+
     // for teh sprites
     public List<Sprite> ballSprites;
 
@@ -32,6 +34,7 @@ public class Ball : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        sp = GetComponent<SpriteRenderer>();
         // initial states
         state = BallStates.WHOLE;
         whoLastHit = LastContact.NONE;
@@ -47,7 +50,7 @@ public class Ball : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        Debug.Log(_rigidbody.velocity);
+        //Debug.Log(_rigidbody.velocity);
     }
 
     void AddElementalForce(){
@@ -79,6 +82,7 @@ public class Ball : MonoBehaviour
         // reseting states
         state = BallStates.WHOLE;
         whoLastHit = LastContact.NONE;
+        sp.color = Color.white;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -114,7 +118,11 @@ public class Ball : MonoBehaviour
                 // if normal interaction, decrease speed
                 if (state == BallStates.WHOLE){
                     // set x direction as opposite of x direction before collision
-                    elementalForce.x = Mathf.Sign(_rigidbody.velocity.x) * -1 * waterSpeedDeduction;
+                    if (whoLastHit == LastContact.P1){
+                        elementalForce.x = -1 * waterSpeedDeduction;
+                    }else{
+                        elementalForce.x = 1 * waterSpeedDeduction;
+                    }
                     // set y direction to directon the ball is already in
                     elementalForce.y = Mathf.Sign(_rigidbody.velocity.y) * waterSpeedDeduction;
                 // if interacting as cracked ball, break
@@ -129,17 +137,22 @@ public class Ball : MonoBehaviour
                 // add no y movement to elemental force
                 elementalForce.y = 0.0f;
                 // set x direction as opposite of x direction before collision
-                elementalForce.x = -1 * Mathf.Sign(_rigidbody.velocity.x) * airSpeedAddition;
+                if (whoLastHit == LastContact.P1){
+                    elementalForce.x = 1 * airSpeedAddition;
+                }else{
+                    elementalForce.x = -1 * airSpeedAddition;
+                }
                 // set flag
                 airForce = true;
                 break;
             case "Fire":
                 // reset the elemental force, it won't be used here
                 elementalForce = Vector2.zero;
-                // FIXME: double collision detection
                 // if normal interaction, crack
                 if (state == BallStates.WHOLE){
                     state = BallStates.CRACKED;
+                    // FIXME: change sprite instead
+                    sp.color = Color.red;
                     Debug.Log("cracked");
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
