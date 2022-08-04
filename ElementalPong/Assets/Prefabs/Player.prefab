@@ -113,6 +113,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c0d1f21bca0d342b8b4b94aece764141, type: 3}
   - {fileID: 21300000, guid: cc208f2fda44e450d8d7ac129b1a9614, type: 3}
   - {fileID: 21300000, guid: 196c4dd4c01674f57a9252eb5240a14c, type: 3}
+  controlInUse: 0
 --- !u!114 &2970434019287269470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,8 +307,348 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8a9f89e2-db85-428c-9e68-374e92b40233
     m_ActionName: UI/Select[/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8848cd5c-0aaa-4e31-bda0-e01191e4ea6d
+    m_ActionName: Game/Pause
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aa11ec59-1b71-49fc-8e13-8e658e9ed441
+    m_ActionName: Game/JoinedWithKeys[/Keyboard/q,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagGamepadJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9233ca47-f361-4754-b026-c87ca7751a88
+    m_ActionName: Game/KoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 44ed7d84-3248-4013-9c4f-7f559b842087
+    m_ActionName: P1/MoveUp[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 43efb15d-e871-4be5-af4c-833f8c3fb983
+    m_ActionName: P1/MoveDown[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipEarth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4231ea57-9298-4f36-944a-043c5e8049b7
+    m_ActionName: P1/Earth[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipWater
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 48203dd0-7e00-491d-9c47-2a0b10f9dce4
+    m_ActionName: P1/Water[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipAir
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 47fb1c94-c596-49e6-a487-0f8fc3cb4a3a
+    m_ActionName: P1/Air[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipFire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3eeb83de-dab7-411e-b21f-e3061515fa9f
+    m_ActionName: P1/Fire[/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7978a455-0673-4228-95be-6ea39544961f
+    m_ActionName: P2/MoveUp[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0a8b2095-54df-4656-8d5a-18106ad230b4
+    m_ActionName: P2/MoveDown[/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipEarth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 09a86756-72cb-4be6-ad03-dda23fb2173c
+    m_ActionName: P2/Earth[/Keyboard/semicolon]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipWater
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 51c3adb8-f74c-41c9-bb17-cfc369c7000c
+    m_ActionName: P2/Water[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipAir
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 705c0c1a-3fda-4ea2-b9f3-d85f7122d68f
+    m_ActionName: P2/Air[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipFire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c72bd190-08c7-421f-a510-2510b21072ae
+    m_ActionName: P2/Fire[/Keyboard/quote]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 965c8b12-244f-44b1-8b4e-98dc117947d0
+    m_ActionName: Game/JoinedWithKeys2[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 42c637e4-9706-479b-97cd-d56f727ee153
+    m_ActionName: P1/JoinedWithKeys1[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: b3423598-b609-4271-816b-b08cb4825a0f
+    m_ActionName: P1/JoinedWithKeys2[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagGamepadJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0da73ff2-0ea4-46f3-b733-37bbb19a7a31
+    m_ActionName: P1/JoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagGamepadJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae452d52-a0d7-4c81-9619-4eb5bb8bc51c
+    m_ActionName: P2/JoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9c274d31-e1da-444c-9719-93180bd4b5dd
+    m_ActionName: P2/JoinedWithKeys1[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 684a9db2-c879-4afb-bddd-0d31680a58a2
+    m_ActionName: P2/JoinedWithKeys2[/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Controller
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Game
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

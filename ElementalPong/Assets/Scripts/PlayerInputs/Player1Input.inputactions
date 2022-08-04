@@ -2,176 +2,6 @@
     "name": "Player1Input",
     "maps": [
         {
-            "name": "Game",
-            "id": "bb43df17-ed8c-4bde-aa57-814d111f7ef4",
-            "actions": [
-                {
-                    "name": "MoveUp",
-                    "type": "Button",
-                    "id": "91465318-2832-474a-9461-4145b45fd459",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "MoveDown",
-                    "type": "Button",
-                    "id": "4e922451-0645-4a26-be9f-90b64226dd84",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Earth",
-                    "type": "Button",
-                    "id": "62ca1403-4cce-41d2-a715-2d22ca5b7d11",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Water",
-                    "type": "Button",
-                    "id": "277cf082-6890-41df-b515-cf6f43bd9b48",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Air",
-                    "type": "Button",
-                    "id": "d9096bad-2521-44e4-894f-d6d3b52f1d10",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Fire",
-                    "type": "Button",
-                    "id": "8b107d92-29cd-4403-b1c5-8584da676f1f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "8848cd5c-0aaa-4e31-bda0-e01191e4ea6d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "fb147318-2322-464a-bbf2-9712b9ff984c",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Earth",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "913983f2-4c92-424f-bb5e-07af19955265",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Water",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f1d2b687-725c-4ca7-bbb3-572571977bf8",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Air",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a93ed650-c674-41c8-941b-f2ab6f78f7dc",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1f875a14-6659-4806-9039-335ce42736a2",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a71fbd80-fcad-43ad-bd57-845fac349e5d",
-                    "path": "<Gamepad>/leftStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveUp",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7d237b98-4a67-4626-b801-6d0ffd8bb199",
-                    "path": "<Gamepad>/dpad/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6e0b7329-52f0-4813-9438-c2acc36bdd23",
-                    "path": "<Gamepad>/leftStick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveDown",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ce32594c-a109-40e7-8935-f6e8b86d96e9",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
             "name": "UI",
             "id": "e85d4d3a-6edc-4e48-820d-f97e5c6f2f03",
             "actions": [
@@ -427,13 +257,13 @@
             ]
         },
         {
-            "name": "P1",
-            "id": "58a10b75-42a9-4301-9591-2debd8ba7c9f",
+            "name": "Game",
+            "id": "bb43df17-ed8c-4bde-aa57-814d111f7ef4",
             "actions": [
                 {
                     "name": "MoveUp",
                     "type": "Button",
-                    "id": "b5a76ce4-350c-483a-82d8-adf8a45f53b1",
+                    "id": "91465318-2832-474a-9461-4145b45fd459",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -442,7 +272,7 @@
                 {
                     "name": "MoveDown",
                     "type": "Button",
-                    "id": "72f418af-e722-4aa1-baf9-ca226d312e99",
+                    "id": "4e922451-0645-4a26-be9f-90b64226dd84",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -451,7 +281,7 @@
                 {
                     "name": "Earth",
                     "type": "Button",
-                    "id": "ddb45cc6-a4c3-401f-972f-ead7033c4fc3",
+                    "id": "62ca1403-4cce-41d2-a715-2d22ca5b7d11",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -460,7 +290,7 @@
                 {
                     "name": "Water",
                     "type": "Button",
-                    "id": "d21dcc9d-e11c-456f-8d4d-3d7e522f9d0d",
+                    "id": "277cf082-6890-41df-b515-cf6f43bd9b48",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -469,7 +299,7 @@
                 {
                     "name": "Air",
                     "type": "Button",
-                    "id": "12d4d239-d281-45d5-87d5-ba3e819e4e71",
+                    "id": "d9096bad-2521-44e4-894f-d6d3b52f1d10",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -478,7 +308,43 @@
                 {
                     "name": "Fire",
                     "type": "Button",
-                    "id": "7ae27849-44cc-4a84-a557-81f1c039ac28",
+                    "id": "8b107d92-29cd-4403-b1c5-8584da676f1f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "8848cd5c-0aaa-4e31-bda0-e01191e4ea6d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys1",
+                    "type": "Button",
+                    "id": "aa11ec59-1b71-49fc-8e13-8e658e9ed441",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys2",
+                    "type": "Button",
+                    "id": "965c8b12-244f-44b1-8b4e-98dc117947d0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithGamepad",
+                    "type": "Button",
+                    "id": "9233ca47-f361-4754-b026-c87ca7751a88",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -488,7 +354,228 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "17cd1c60-254b-4460-82ee-d8ff42912c7f",
+                    "id": "fb147318-2322-464a-bbf2-9712b9ff984c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Earth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "913983f2-4c92-424f-bb5e-07af19955265",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Water",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1d2b687-725c-4ca7-bbb3-572571977bf8",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Air",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a93ed650-c674-41c8-941b-f2ab6f78f7dc",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f875a14-6659-4806-9039-335ce42736a2",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a71fbd80-fcad-43ad-bd57-845fac349e5d",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7d237b98-4a67-4626-b801-6d0ffd8bb199",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e0b7329-52f0-4813-9438-c2acc36bdd23",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce32594c-a109-40e7-8935-f6e8b86d96e9",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "74c8a474-eff6-4719-859d-38de26126963",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2abbf014-c78d-4bd9-9dff-15e473b75322",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1bfbf242-634f-467a-9429-d4c3fc70edd7",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "P1",
+            "id": "554fb505-20bc-4f28-b636-18b92e171eb9",
+            "actions": [
+                {
+                    "name": "MoveUp",
+                    "type": "Button",
+                    "id": "44ed7d84-3248-4013-9c4f-7f559b842087",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveDown",
+                    "type": "Button",
+                    "id": "43efb15d-e871-4be5-af4c-833f8c3fb983",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Earth",
+                    "type": "Button",
+                    "id": "4231ea57-9298-4f36-944a-043c5e8049b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Water",
+                    "type": "Button",
+                    "id": "48203dd0-7e00-491d-9c47-2a0b10f9dce4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Air",
+                    "type": "Button",
+                    "id": "47fb1c94-c596-49e6-a487-0f8fc3cb4a3a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "3eeb83de-dab7-411e-b21f-e3061515fa9f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys1",
+                    "type": "Button",
+                    "id": "42c637e4-9706-479b-97cd-d56f727ee153",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys2",
+                    "type": "Button",
+                    "id": "b3423598-b609-4271-816b-b08cb4825a0f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithGamepad",
+                    "type": "Button",
+                    "id": "0da73ff2-0ea4-46f3-b733-37bbb19a7a31",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7940eb90-85ba-46fc-ad83-5785fd99d427",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
@@ -499,7 +586,7 @@
                 },
                 {
                     "name": "",
-                    "id": "376f17c4-66d2-4f6f-81c3-ce4ed34606cb",
+                    "id": "ae06700b-8463-4d1c-ba9d-bfd161dca2e4",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -510,7 +597,7 @@
                 },
                 {
                     "name": "",
-                    "id": "5f6ae687-bfa5-469d-9364-eb1c41bae394",
+                    "id": "4df30ab4-abd4-4bbc-af36-e8f67378f021",
                     "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
@@ -521,7 +608,7 @@
                 },
                 {
                     "name": "",
-                    "id": "894ffbe5-8189-4fbf-b0ff-18cacfd7b04c",
+                    "id": "107c800e-03d2-439c-817e-d62ef1e3bded",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -532,7 +619,7 @@
                 },
                 {
                     "name": "",
-                    "id": "f218c746-cecd-47c9-8b06-1c5fb75eb51b",
+                    "id": "57e40824-8ba7-4fde-b84f-b4080d891d4d",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
@@ -543,7 +630,7 @@
                 },
                 {
                     "name": "",
-                    "id": "11774bb8-1118-4c5f-a400-cfcd770c0285",
+                    "id": "4b5071cd-6fb8-47a1-b42f-74392a092bfd",
                     "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
@@ -551,17 +638,50 @@
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ee5d103-454f-47fd-bb8c-ae94e5d7b97a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96af5954-fd1e-4357-9eb6-8f2db708cac3",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a0b7822-c4b9-4fdd-a6d6-9c8ef1801ceb",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
             "name": "P2",
-            "id": "380d5cd7-884b-402c-8bcd-bba71533ab08",
+            "id": "d636cd77-f12e-4c96-ad62-b5587adc02b4",
             "actions": [
                 {
                     "name": "MoveUp",
                     "type": "Button",
-                    "id": "95ce2d18-e1f2-49a4-a863-251122f5297b",
+                    "id": "7978a455-0673-4228-95be-6ea39544961f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -570,7 +690,7 @@
                 {
                     "name": "MoveDown",
                     "type": "Button",
-                    "id": "8c63945b-ed91-4535-a6d8-6ca7723355a4",
+                    "id": "0a8b2095-54df-4656-8d5a-18106ad230b4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -579,7 +699,7 @@
                 {
                     "name": "Earth",
                     "type": "Button",
-                    "id": "42c7486c-efde-43bf-b94d-03de53b775e2",
+                    "id": "09a86756-72cb-4be6-ad03-dda23fb2173c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -588,7 +708,7 @@
                 {
                     "name": "Water",
                     "type": "Button",
-                    "id": "77fa90f6-b5ad-4045-9190-535fb48b4062",
+                    "id": "51c3adb8-f74c-41c9-bb17-cfc369c7000c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -597,7 +717,7 @@
                 {
                     "name": "Air",
                     "type": "Button",
-                    "id": "ab118199-d1dd-4538-98fb-fd642ad53e5a",
+                    "id": "705c0c1a-3fda-4ea2-b9f3-d85f7122d68f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -606,7 +726,34 @@
                 {
                     "name": "Fire",
                     "type": "Button",
-                    "id": "2b87ebf0-8feb-4c28-90d8-8f2ace66d541",
+                    "id": "c72bd190-08c7-421f-a510-2510b21072ae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithGamepad",
+                    "type": "Button",
+                    "id": "ae452d52-a0d7-4c81-9619-4eb5bb8bc51c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys1",
+                    "type": "Button",
+                    "id": "9c274d31-e1da-444c-9719-93180bd4b5dd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys2",
+                    "type": "Button",
+                    "id": "684a9db2-c879-4afb-bddd-0d31680a58a2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -616,7 +763,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "9c2ec134-7a2d-4d30-8318-69ef7506b900",
+                    "id": "1bff2e7c-ec1c-4718-97a1-5b1399e0f069",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
@@ -627,7 +774,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e611fbb0-e5f4-4d72-9ea7-cad983b5bd32",
+                    "id": "941eaa8d-40d9-4fec-9305-2960b39a1f3a",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
@@ -638,7 +785,7 @@
                 },
                 {
                     "name": "",
-                    "id": "096f664d-441b-465a-817b-9cf4590394eb",
+                    "id": "8baa83dd-5205-4268-9f82-7d6756b83b3c",
                     "path": "<Keyboard>/semicolon",
                     "interactions": "",
                     "processors": "",
@@ -649,7 +796,7 @@
                 },
                 {
                     "name": "",
-                    "id": "d7155bd4-0aee-4c92-a459-108483c52f64",
+                    "id": "7c2c727d-4f47-4cdb-845a-8e13972aa770",
                     "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
@@ -660,7 +807,7 @@
                 },
                 {
                     "name": "",
-                    "id": "5bf6346f-83c8-4c3a-9d23-567a884d00d1",
+                    "id": "78d96616-1303-41d0-9323-023f07d6ebe6",
                     "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
@@ -671,12 +818,45 @@
                 },
                 {
                     "name": "",
-                    "id": "61222aaa-5331-49af-b7c8-a18b9caef901",
+                    "id": "36520a85-5c8f-4ea1-9cce-ab0f67c4ecbd",
                     "path": "<Keyboard>/quote",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9391f290-f8b0-4696-b85a-1e70477723f0",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3bd0a4d6-edce-45a6-b549-8e4b681b2089",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8fbfeb5e-f0ed-4ab9-afc5-17b4762dd492",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

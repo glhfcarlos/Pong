@@ -734,13 +734,13 @@ MonoBehaviour:
   m_NotificationBehavior: 0
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_JoinBehavior: 1
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 649339811}
+      - m_Target: {fileID: 649339808}
         m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
-        m_MethodName: HandlePlayerJoin
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -768,13 +768,37 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 7caff784-1126-4b33-8882-b9c6bf771ae2
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: c4fed0a8-9e74-4a99-943f-856a370f9504
+        m_Path: <Gamepad>/dpad/up
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 2e30354b-92c0-4638-ad30-78c354d39e02
+        m_Path: <Keyboard>/q
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 2f0d67ed-9dc7-46be-a1f2-6a970fa00a6b
+        m_Path: <Keyboard>/upArrow
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PlayerPrefab: {fileID: 2970434019287269442, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
