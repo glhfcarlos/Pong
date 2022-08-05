@@ -776,7 +776,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: c4fed0a8-9e74-4a99-943f-856a370f9504
+        m_Id: b71e0d51-1d39-420f-a606-6b69b1cd21a2
         m_Path: <Gamepad>/dpad/up
         m_Interactions: 
         m_Processors: 
@@ -784,7 +784,7 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
       - m_Name: 
-        m_Id: 2e30354b-92c0-4638-ad30-78c354d39e02
+        m_Id: 66aa28cc-58fe-48a5-9340-2c263748efc0
         m_Path: <Keyboard>/q
         m_Interactions: 
         m_Processors: 
@@ -792,7 +792,7 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
       - m_Name: 
-        m_Id: 2f0d67ed-9dc7-46be-a1f2-6a970fa00a6b
+        m_Id: 7ed46be4-291f-4376-8abc-62d270be0496
         m_Path: <Keyboard>/upArrow
         m_Interactions: 
         m_Processors: 
@@ -800,7 +800,7 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 2795653597188215675, guid: 838b136f2b561084aa6e4ba0b7b198cc, type: 3}
   m_PlayerPrefab: {fileID: 2970434019287269442, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0

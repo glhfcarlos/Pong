@@ -27,7 +27,7 @@ public class PaddleUnit : MonoBehaviour
     void Awake()
     {
         transform.position = startPosition;
-        direction = 1.0f;
+        direction = 0.0f;
         currentSpeed = defaultSpeed;
         currentVelocity = Vector3.zero;
         playerInput = GetComponent<PlayerInput>();

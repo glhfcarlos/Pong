@@ -717,8 +717,41 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "abb45e3b-9bd7-4f78-a5ef-3afb30eafa6b",
+                    "id": "2d75b75e-414e-40f0-ac00-0dbe37b2ac0d",
                     "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59e320e3-a5c1-49cf-91c9-9dbe2dc4b7e2",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e9743418-3a88-45fa-982e-d37abd2d2f6d",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a871fe03-ca98-46c9-b451-4150de2c293f",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -739,8 +772,30 @@
                 },
                 {
                     "name": "",
+                    "id": "c7454e91-fcc1-42ec-8420-558a78ca9e28",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "aa1ad02f-09cc-4076-89a0-4c1c5bc1ffa3",
                     "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd22791a-8fcd-4612-928f-c9e9f1d4a498",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
