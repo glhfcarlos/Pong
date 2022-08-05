@@ -115,5 +115,4 @@ public class ElementalPowers : MonoBehaviour
             Debug.Log("pausing game");
         }
     }
-
 }
