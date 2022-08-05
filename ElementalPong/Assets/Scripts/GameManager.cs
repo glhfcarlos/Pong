@@ -47,8 +47,7 @@ public class GameManager : MonoBehaviour
         // display time left
         int minutes = secondsLeft / 60;
         int seconds = secondsLeft % 60;
-        //timerText.text = minutes.ToString() + ":" + seconds.ToString();
-        timerText.text = secondsLeft.ToString();
+        timerText.text = minutes.ToString() + ":" + seconds.ToString();
         // decrement time left
         secondsLeft--;
         // enables update to run this again
