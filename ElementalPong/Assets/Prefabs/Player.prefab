@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2970434019287269471}
   - component: {fileID: 2970434019287269440}
+  - component: {fileID: 6989483359000441251}
   - component: {fileID: 3259566081095166010}
   - component: {fileID: 2970434019287269470}
   - component: {fileID: 2970434019287269468}
   - component: {fileID: 2970434019287269469}
-  - component: {fileID: 6989483359000441251}
+  - component: {fileID: 3916264318041474750}
   m_Layer: 0
   m_Name: Player
   m_TagString: Earth
@@ -89,6 +90,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6989483359000441251
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970434019287269442}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 1.77}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 1.77}
+  m_EdgeRadius: 0
 --- !u!114 &3259566081095166010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +140,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c0d1f21bca0d342b8b4b94aece764141, type: 3}
   - {fileID: 21300000, guid: cc208f2fda44e450d8d7ac129b1a9614, type: 3}
   - {fileID: 21300000, guid: 196c4dd4c01674f57a9252eb5240a14c, type: 3}
-  controlInUse: 0
 --- !u!114 &2970434019287269470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,38 +353,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2970434019287269468}
         m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
-        m_MethodName: FlagKeyboardJoin
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: aa11ec59-1b71-49fc-8e13-8e658e9ed441
-    m_ActionName: Game/JoinedWithKeys[/Keyboard/q,/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
-        m_MethodName: FlagGamepadJoin
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9233ca47-f361-4754-b026-c87ca7751a88
-    m_ActionName: Game/KoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
         m_MethodName: MoveUp
         m_Mode: 0
         m_Arguments:
@@ -548,45 +542,9 @@ MonoBehaviour:
     m_ActionId: c72bd190-08c7-421f-a510-2510b21072ae
     m_ActionName: P2/Fire[/Keyboard/quote]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 965c8b12-244f-44b1-8b4e-98dc117947d0
-    m_ActionName: Game/JoinedWithKeys2[/Keyboard/upArrow]
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
-        m_MethodName: FlagKeyboardJoin1
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 42c637e4-9706-479b-97cd-d56f727ee153
-    m_ActionName: P1/JoinedWithKeys1[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
-        m_MethodName: FlagKeyboardJoin2
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b3423598-b609-4271-816b-b08cb4825a0f
-    m_ActionName: P1/JoinedWithKeys2[/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+      - m_Target: {fileID: 3916264318041474750}
+        m_TargetAssemblyTypeName: JustJoining, Assembly-CSharp
         m_MethodName: FlagGamepadJoin
         m_Mode: 0
         m_Arguments:
@@ -597,28 +555,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 0da73ff2-0ea4-46f3-b733-37bbb19a7a31
-    m_ActionName: P1/JoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
+    m_ActionId: 45ad029f-5cc5-4b97-bfe0-a61c8de96cad
+    m_ActionName: Joining/JoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
-        m_MethodName: FlagGamepadJoin
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ae452d52-a0d7-4c81-9619-4eb5bb8bc51c
-    m_ActionName: P2/JoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+      - m_Target: {fileID: 3916264318041474750}
+        m_TargetAssemblyTypeName: JustJoining, Assembly-CSharp
         m_MethodName: FlagKeyboardJoin1
         m_Mode: 0
         m_Arguments:
@@ -629,12 +571,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9c274d31-e1da-444c-9719-93180bd4b5dd
-    m_ActionName: P2/JoinedWithKeys1[/Keyboard/q]
+    m_ActionId: a1dabf85-2e41-4049-92c1-bd2eb70c35d2
+    m_ActionName: Joining/JoinedWithKeys1[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2970434019287269468}
-        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+      - m_Target: {fileID: 3916264318041474750}
+        m_TargetAssemblyTypeName: JustJoining, Assembly-CSharp
         m_MethodName: FlagKeyboardJoin2
         m_Mode: 0
         m_Arguments:
@@ -645,11 +587,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 684a9db2-c879-4afb-bddd-0d31680a58a2
-    m_ActionName: P2/JoinedWithKeys2[/Keyboard/upArrow]
+    m_ActionId: 928bb76a-8c59-4fb5-a4aa-36e8619b8437
+    m_ActionName: Joining/JoinedWithKeys2[/Keyboard/upArrow]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Game
+  m_DefaultActionMap: Joining
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &2970434019287269468
@@ -676,29 +618,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d312433e85faf42a9424a8c809ecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &6989483359000441251
-BoxCollider2D:
+--- !u!114 &3916264318041474750
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2970434019287269442}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 1.77}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24, y: 1.77}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f384625c191b64698de706726b5d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

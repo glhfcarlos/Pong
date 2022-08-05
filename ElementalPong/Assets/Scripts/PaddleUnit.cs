@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public enum ControlType { KEYBOARD1, KEYBOARD2, GAMEPAD }
 
 public class PaddleUnit : MonoBehaviour
 {
@@ -23,8 +22,6 @@ public class PaddleUnit : MonoBehaviour
     private Vector3 currentVelocity;
 
     private PlayerInput playerInput;
-    private bool controlSet;
-    public ControlType controlInUse;
     
     // Awake is called
     void Awake()

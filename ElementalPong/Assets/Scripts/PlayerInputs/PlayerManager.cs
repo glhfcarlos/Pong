@@ -11,21 +11,6 @@ public class PlayerManager : MonoBehaviour
     void OnPlayerJoined(PlayerInput playerInput){
         PaddleUnit paddle = playerInput.gameObject.GetComponent<PaddleUnit>();
 
-        /*
-            If player joins with keyboard, give them the P1 action map and set p1IsTaken to true.
-            If player joins with gamepad, give them the Game action map.
-            If player joins with keyboard and p1IsTaken is true, give them P2 action map.
-        */
-        /*
-        if (paddle.controlInUse == ControlType.GAMEPAD){
-            playerInput.SwitchCurrentActionMap("Game");
-        }else if (paddle.controlInUse == ControlType.KEYBOARD1){
-            playerInput.SwitchCurrentActionMap("P1");
-        }else if (paddle.controlInUse == ControlType.KEYBOARD2){
-            playerInput.SwitchCurrentActionMap("P2");
-        }
-        */
-
         Debug.Log("Player Input ID: " + playerInput.playerIndex.ToString());
 
         // Set the player ID, add one to the index to start at Player 1

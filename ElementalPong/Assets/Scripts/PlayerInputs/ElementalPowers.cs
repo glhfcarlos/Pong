@@ -15,14 +15,11 @@ public class ElementalPowers : MonoBehaviour
     private SpriteRenderer sp;
     private PaddleUnit paddle;
 
-    private bool controlSet;
-
     // Start is called before the first frame update
     private void Awake()
     {
         sp = GetComponent<SpriteRenderer>();
         paddle = GetComponent<PaddleUnit>();
-        controlSet = false;
     }
 
     /*
@@ -118,28 +115,4 @@ public class ElementalPowers : MonoBehaviour
             Debug.Log("pausing game");
         }
     }
-
-
-
-    /* The below functions are for managing players joining with controller or a keyboard */
-
-    public void FlagKeyboardJoin1(InputAction.CallbackContext context){
-        if (context.performed && !controlSet){
-            paddle.controlInUse = ControlType.KEYBOARD1;
-            controlSet = true;
-        }
-    }
-    public void FlagKeyboardJoin2(InputAction.CallbackContext context){
-        if (context.performed && !controlSet){
-            paddle.controlInUse = ControlType.KEYBOARD2;
-            controlSet = true;
-        }
-    }
-    public void FlagGamepadJoin(InputAction.CallbackContext context){
-        if (context.performed && !controlSet){
-            paddle.controlInUse = ControlType.GAMEPAD;
-            controlSet = true;
-        }
-    }
-
 }
