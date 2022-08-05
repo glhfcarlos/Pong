@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+
         DontDestroyOnLoad(gameObject);
 
         foreach (Sound s in sounds){
@@ -32,6 +32,7 @@ public class AudioManager : MonoBehaviour
     }
     void Start(){
         // play game's BGM here
+        Play("TempBGM");
     }
 
     // Update is called once per frame
