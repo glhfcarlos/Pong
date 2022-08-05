@@ -45,7 +45,9 @@ public class GameManager : MonoBehaviour
         paused = true;
         yield return new WaitForSeconds(1);
         // display time left
-        timerText.text = secondsLeft.ToString();
+        int minutes = secondsLeft / 60;
+        int seconds = secondsLeft % 60;
+        timerText.text = minutes.ToString() + ":" + seconds.ToString();
         // decrement time left
         secondsLeft--;
         // enables update to run this again
