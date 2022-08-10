@@ -5,16 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu;
+    public GameObject ResumeButton;
+    public GameObject HomeButton;
+    public static PauseMenu instance;
 
+    void Awake()
+    {
+        if (instance == null){
+            instance = this;
+        }else{
+            Destroy(gameObject);
+            return;
+        }
+    }
+    
     public void Pause()
     {
-        pauseMenu.SetActive(true);
+        ResumeButton.SetActive(true);
+        HomeButton.SetActive(true);
         Time.timeScale = 0f;
     }
     public void Resume()
     {
-        pauseMenu.SetActive(false);
+        ResumeButton.SetActive(false);
+        HomeButton.SetActive(false);
         Time.timeScale = 1f;
     }
     public void Home(int sceneID)
