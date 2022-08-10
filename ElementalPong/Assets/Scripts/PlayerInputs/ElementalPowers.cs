@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class ElementalPowers : MonoBehaviour
 {
+    private PlayerInput playerInput;
+
+
     /*
         Change sprite
         change speed (rigidbody)
@@ -20,6 +23,7 @@ public class ElementalPowers : MonoBehaviour
     {
         sp = GetComponent<SpriteRenderer>();
         paddle = GetComponent<PaddleUnit>();
+        playerInput = GetComponent<PlayerInput>();
     }
 
     /*
@@ -113,7 +117,8 @@ public class ElementalPowers : MonoBehaviour
     public void PauseGame(InputAction.CallbackContext context){
         if (context.performed){
             Debug.Log("pausing game");
+            playerInput.SwitchCurrentActionMap("UI");
+            FindObjectOfType<PauseMenu>().Pause();
         }
     }
-
 }

@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2970434019287269471}
   - component: {fileID: 2970434019287269440}
+  - component: {fileID: 6989483359000441251}
   - component: {fileID: 3259566081095166010}
   - component: {fileID: 2970434019287269470}
   - component: {fileID: 2970434019287269468}
   - component: {fileID: 2970434019287269469}
-  - component: {fileID: 6989483359000441251}
+  - component: {fileID: 3916264318041474750}
   m_Layer: 0
   m_Name: Player
   m_TagString: Earth
@@ -89,6 +90,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6989483359000441251
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970434019287269442}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 1.77}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 1.77}
+  m_EdgeRadius: 0
 --- !u!114 &3259566081095166010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,9 +333,281 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8a9f89e2-db85-428c-9e68-374e92b40233
     m_ActionName: UI/Select[/DualShock4GamepadHID/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8848cd5c-0aaa-4e31-bda0-e01191e4ea6d
+    m_ActionName: Game/Pause
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 44ed7d84-3248-4013-9c4f-7f559b842087
+    m_ActionName: P1/MoveUp[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 43efb15d-e871-4be5-af4c-833f8c3fb983
+    m_ActionName: P1/MoveDown[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipEarth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4231ea57-9298-4f36-944a-043c5e8049b7
+    m_ActionName: P1/Earth[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipWater
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 48203dd0-7e00-491d-9c47-2a0b10f9dce4
+    m_ActionName: P1/Water[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipAir
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 47fb1c94-c596-49e6-a487-0f8fc3cb4a3a
+    m_ActionName: P1/Air[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipFire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3eeb83de-dab7-411e-b21f-e3061515fa9f
+    m_ActionName: P1/Fire[/Keyboard/g]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7978a455-0673-4228-95be-6ea39544961f
+    m_ActionName: P2/MoveUp[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: MoveDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0a8b2095-54df-4656-8d5a-18106ad230b4
+    m_ActionName: P2/MoveDown[/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipEarth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 09a86756-72cb-4be6-ad03-dda23fb2173c
+    m_ActionName: P2/Earth[/Keyboard/semicolon]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipWater
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 51c3adb8-f74c-41c9-bb17-cfc369c7000c
+    m_ActionName: P2/Water[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipAir
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 705c0c1a-3fda-4ea2-b9f3-d85f7122d68f
+    m_ActionName: P2/Air[/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269468}
+        m_TargetAssemblyTypeName: ElementalPowers, Assembly-CSharp
+        m_MethodName: EquipFire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c72bd190-08c7-421f-a510-2510b21072ae
+    m_ActionName: P2/Fire[/Keyboard/quote]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3916264318041474750}
+        m_TargetAssemblyTypeName: JustJoining, Assembly-CSharp
+        m_MethodName: FlagGamepadJoin
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 45ad029f-5cc5-4b97-bfe0-a61c8de96cad
+    m_ActionName: Joining/JoinedWithGamepad[/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID1/dpad/up]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3916264318041474750}
+        m_TargetAssemblyTypeName: JustJoining, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a1dabf85-2e41-4049-92c1-bd2eb70c35d2
+    m_ActionName: Joining/JoinedWithKeys1[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3916264318041474750}
+        m_TargetAssemblyTypeName: JustJoining, Assembly-CSharp
+        m_MethodName: FlagKeyboardJoin2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 928bb76a-8c59-4fb5-a4aa-36e8619b8437
+    m_ActionName: Joining/JoinedWithKeys2[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269469}
+        m_TargetAssemblyTypeName: UIAction, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae9c8b87-ebcf-4213-bb1e-afa847b22c6c
+    m_ActionName: UI/UnPause[/XboxOneGampadMacOSWireless/start]
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Controller
-  m_DefaultActionMap: Game
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Joining
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &2970434019287269468
@@ -323,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de49310715363242927a16088adf08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1433807527657728691, guid: 36884630291dd47f198fdcf2452142fd, type: 3}
 --- !u!114 &2970434019287269469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,29 +635,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d312433e85faf42a9424a8c809ecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &6989483359000441251
-BoxCollider2D:
+  pauseMenu: {fileID: 1433807527657728691, guid: 36884630291dd47f198fdcf2452142fd, type: 3}
+--- !u!114 &3916264318041474750
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2970434019287269442}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 1.77}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24, y: 1.77}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f384625c191b64698de706726b5d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

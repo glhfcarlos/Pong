@@ -2,6 +2,281 @@
     "name": "Player1Input",
     "maps": [
         {
+            "name": "UI",
+            "id": "e85d4d3a-6edc-4e48-820d-f97e5c6f2f03",
+            "actions": [
+                {
+                    "name": "VerticalScroll",
+                    "type": "Button",
+                    "id": "d39256f9-0d59-4093-8aab-75a7db30905d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HorizontalScroll",
+                    "type": "Button",
+                    "id": "d22da92e-18b5-491e-a94a-614852e81fe4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "8a9f89e2-db85-428c-9e68-374e92b40233",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UnPause",
+                    "type": "Button",
+                    "id": "ae9c8b87-ebcf-4213-bb1e-afa847b22c6c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "DPad",
+                    "id": "eeeb8490-65c6-47e7-a548-20b4ca9b374f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "9d564e58-e200-4758-a810-b91b0c2c55af",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8239b6b6-76b1-462a-9277-8302a7074dbd",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Joystick",
+                    "id": "d4502d86-1b59-494f-b674-a9da1d5fa324",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "afd117fa-23ed-45c6-8988-f5bb59e2e518",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "de2a6a32-7a11-4355-88a4-008bf08abcf0",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard",
+                    "id": "5e4cebe2-35ae-4478-b60b-c9a9ad7a50fb",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "0ac329d2-4731-4dde-b134-db7a28cd8f5e",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "4a063b1d-2a75-40db-a154-a4637ddfe895",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "VerticalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "DPad",
+                    "id": "a965c226-95e2-47c8-a9f5-71eb6ed1160f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "b68a2853-91fc-462f-8195-af9469dd195a",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "dae346b7-dfbe-41b7-ba7a-997ef92c63ff",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Jotstick",
+                    "id": "2a6da044-4897-4bda-b6c3-41ea779a6cda",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "cd064dbc-02bd-4712-9449-aaa66965af51",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "94f42683-38a8-4086-bf14-883fd542db4c",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard",
+                    "id": "9c638012-5f87-4fbb-b606-5b767bd399d8",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "501307e8-b0d6-462b-b63d-9bea69be2f0c",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "981525ae-c75a-4d3a-bbee-c9e6de7098d8",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HorizontalScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "800d70b5-e433-4e3d-808b-692751f87cca",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20fb03bd-3b29-45d9-a5c5-51140d02529b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2a90467-401e-4e08-a04f-6ca0dbbd07e0",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UnPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Game",
             "id": "bb43df17-ed8c-4bde-aa57-814d111f7ef4",
             "actions": [
@@ -172,31 +447,58 @@
             ]
         },
         {
-            "name": "UI",
-            "id": "e85d4d3a-6edc-4e48-820d-f97e5c6f2f03",
+            "name": "P1",
+            "id": "554fb505-20bc-4f28-b636-18b92e171eb9",
             "actions": [
                 {
-                    "name": "VerticalScroll",
+                    "name": "MoveUp",
                     "type": "Button",
-                    "id": "d39256f9-0d59-4093-8aab-75a7db30905d",
+                    "id": "44ed7d84-3248-4013-9c4f-7f559b842087",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HorizontalScroll",
+                    "name": "MoveDown",
                     "type": "Button",
-                    "id": "d22da92e-18b5-491e-a94a-614852e81fe4",
+                    "id": "43efb15d-e871-4be5-af4c-833f8c3fb983",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Select",
+                    "name": "Earth",
                     "type": "Button",
-                    "id": "8a9f89e2-db85-428c-9e68-374e92b40233",
+                    "id": "4231ea57-9298-4f36-944a-043c5e8049b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Water",
+                    "type": "Button",
+                    "id": "48203dd0-7e00-491d-9c47-2a0b10f9dce4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Air",
+                    "type": "Button",
+                    "id": "47fb1c94-c596-49e6-a487-0f8fc3cb4a3a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "3eeb83de-dab7-411e-b21f-e3061515fa9f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -205,145 +507,319 @@
             ],
             "bindings": [
                 {
-                    "name": "DPad",
-                    "id": "eeeb8490-65c6-47e7-a548-20b4ca9b374f",
-                    "path": "1DAxis",
+                    "name": "",
+                    "id": "7940eb90-85ba-46fc-ad83-5785fd99d427",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalScroll",
-                    "isComposite": true,
+                    "action": "MoveUp",
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "9d564e58-e200-4758-a810-b91b0c2c55af",
-                    "path": "<Gamepad>/dpad/down",
+                    "name": "",
+                    "id": "ae06700b-8463-4d1c-ba9d-bfd161dca2e4",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalScroll",
+                    "action": "MoveDown",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "positive",
-                    "id": "8239b6b6-76b1-462a-9277-8302a7074dbd",
+                    "name": "",
+                    "id": "4df30ab4-abd4-4bbc-af36-e8f67378f021",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Earth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "107c800e-03d2-439c-817e-d62ef1e3bded",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Water",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57e40824-8ba7-4fde-b84f-b4080d891d4d",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Air",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b5071cd-6fb8-47a1-b42f-74392a092bfd",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "P2",
+            "id": "d636cd77-f12e-4c96-ad62-b5587adc02b4",
+            "actions": [
+                {
+                    "name": "MoveUp",
+                    "type": "Button",
+                    "id": "7978a455-0673-4228-95be-6ea39544961f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveDown",
+                    "type": "Button",
+                    "id": "0a8b2095-54df-4656-8d5a-18106ad230b4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Earth",
+                    "type": "Button",
+                    "id": "09a86756-72cb-4be6-ad03-dda23fb2173c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Water",
+                    "type": "Button",
+                    "id": "51c3adb8-f74c-41c9-bb17-cfc369c7000c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Air",
+                    "type": "Button",
+                    "id": "705c0c1a-3fda-4ea2-b9f3-d85f7122d68f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "c72bd190-08c7-421f-a510-2510b21072ae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1bff2e7c-ec1c-4718-97a1-5b1399e0f069",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "941eaa8d-40d9-4fec-9305-2960b39a1f3a",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8baa83dd-5205-4268-9f82-7d6756b83b3c",
+                    "path": "<Keyboard>/semicolon",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Earth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c2c727d-4f47-4cdb-845a-8e13972aa770",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Water",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78d96616-1303-41d0-9323-023f07d6ebe6",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Air",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36520a85-5c8f-4ea1-9cce-ab0f67c4ecbd",
+                    "path": "<Keyboard>/quote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Joining",
+            "id": "5ea0c079-f16f-42bc-8143-76ca0887f718",
+            "actions": [
+                {
+                    "name": "JoinedWithGamepad",
+                    "type": "Button",
+                    "id": "45ad029f-5cc5-4b97-bfe0-a61c8de96cad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys1",
+                    "type": "Button",
+                    "id": "a1dabf85-2e41-4049-92c1-bd2eb70c35d2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JoinedWithKeys2",
+                    "type": "Button",
+                    "id": "928bb76a-8c59-4fb5-a4aa-36e8619b8437",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2d75b75e-414e-40f0-ac00-0dbe37b2ac0d",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalScroll",
+                    "action": "JoinedWithGamepad",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Joystick",
-                    "id": "d4502d86-1b59-494f-b674-a9da1d5fa324",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "VerticalScroll",
-                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "afd117fa-23ed-45c6-8988-f5bb59e2e518",
+                    "name": "",
+                    "id": "59e320e3-a5c1-49cf-91c9-9dbe2dc4b7e2",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithGamepad",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e9743418-3a88-45fa-982e-d37abd2d2f6d",
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalScroll",
+                    "action": "JoinedWithGamepad",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "positive",
-                    "id": "de2a6a32-7a11-4355-88a4-008bf08abcf0",
+                    "name": "",
+                    "id": "a871fe03-ca98-46c9-b451-4150de2c293f",
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalScroll",
+                    "action": "JoinedWithGamepad",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "DPad",
-                    "id": "a965c226-95e2-47c8-a9f5-71eb6ed1160f",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalScroll",
-                    "isComposite": true,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "b68a2853-91fc-462f-8195-af9469dd195a",
-                    "path": "<Gamepad>/dpad/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalScroll",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "dae346b7-dfbe-41b7-ba7a-997ef92c63ff",
-                    "path": "<Gamepad>/dpad/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalScroll",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Jotstick",
-                    "id": "2a6da044-4897-4bda-b6c3-41ea779a6cda",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalScroll",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "cd064dbc-02bd-4712-9449-aaa66965af51",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalScroll",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "94f42683-38a8-4086-bf14-883fd542db4c",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HorizontalScroll",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
-                    "id": "800d70b5-e433-4e3d-808b-692751f87cca",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "88389379-9881-40d2-8646-b5424c99dae8",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Select",
+                    "action": "JoinedWithKeys1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7454e91-fcc1-42ec-8420-558a78ca9e28",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa1ad02f-09cc-4076-89a0-4c1c5bc1ffa3",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd22791a-8fcd-4612-928f-c9e9f1d4a498",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoinedWithKeys2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -357,7 +833,18 @@
             "devices": [
                 {
                     "devicePath": "<Gamepad>",
-                    "isOptional": false,
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]

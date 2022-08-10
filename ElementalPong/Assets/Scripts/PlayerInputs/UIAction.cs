@@ -5,10 +5,12 @@ using UnityEngine.InputSystem;
 
 public class UIAction : MonoBehaviour
 {
+    private PlayerInput playerInput;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerInput = GetComponent<PlayerInput>();
     }
 
     /*
@@ -53,6 +55,14 @@ public class UIAction : MonoBehaviour
     public void SelectOption(InputAction.CallbackContext context){
         if (context.canceled){
             Debug.Log("selecting");
+        }
+    }
+
+    public void UnPause(InputAction.CallbackContext context){
+        if (context.canceled){
+            Debug.Log("selecting");
+            playerInput.SwitchCurrentActionMap("Game");
+            FindObjectOfType<PauseMenu>().Resume();
         }
     }
 }
