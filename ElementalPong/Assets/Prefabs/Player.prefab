@@ -589,6 +589,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 928bb76a-8c59-4fb5-a4aa-36e8619b8437
     m_ActionName: Joining/JoinedWithKeys2[/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2970434019287269469}
+        m_TargetAssemblyTypeName: UIAction, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ae9c8b87-ebcf-4213-bb1e-afa847b22c6c
+    m_ActionName: UI/UnPause[/XboxOneGampadMacOSWireless/start]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Joining
@@ -606,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de49310715363242927a16088adf08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1433807527657728691, guid: 36884630291dd47f198fdcf2452142fd, type: 3}
 --- !u!114 &2970434019287269469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d312433e85faf42a9424a8c809ecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1433807527657728691, guid: 36884630291dd47f198fdcf2452142fd, type: 3}
 --- !u!114 &3916264318041474750
 MonoBehaviour:
   m_ObjectHideFlags: 0
