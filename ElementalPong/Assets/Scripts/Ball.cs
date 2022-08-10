@@ -6,6 +6,8 @@ public enum BallStates { WHOLE, CRACKED, BROKEN }
 public enum LastContact { NONE, P1, P2 }
 public class Ball : MonoBehaviour
 {
+    public ParticleSystem particleLauncher;
+
     public float initialSpeed;
 
     // these values are for the elemental force vector
