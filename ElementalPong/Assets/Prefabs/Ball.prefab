@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5273459465046939644}
   - component: {fileID: 5273459465046939645}
   - component: {fileID: 5273459465046939646}
+  - component: {fileID: 6366282760503730507}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -145,6 +146,24 @@ MonoBehaviour:
   whoLastHit: 0
   state: 0
   ballSprites: []
+--- !u!114 &6366282760503730507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273459465046939647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7203302355f0e24198ff932451de999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballParticles: {fileID: 884580762170637330}
+  fireParticleColor: {r: 0.6792453, g: 0.15487029, b: 0, a: 1}
+  airParticleColor: {r: 0.2679245, g: 0.8261724, b: 1, a: 1}
+  waterParticleColor: {r: 0.17903166, g: 0.20992823, b: 0.8867924, a: 1}
+  earthParticleColor: {r: 0.4528302, g: 0.22388881, b: 0.0059807524, a: 1}
+  defaultParticleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8323552123175103915
 GameObject:
   m_ObjectHideFlags: 0
