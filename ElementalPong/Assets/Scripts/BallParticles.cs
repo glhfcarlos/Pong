@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BallParticles : MonoBehaviour
 {
-    private ParticleSystem ballParticles;
+    public ParticleSystem ballParticles;
     private ParticleSystem.MainModule mainMod;
 
     public Color fireParticleColor;
@@ -15,14 +15,12 @@ public class BallParticles : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        ballParticles = GetComponent<ParticleSystem>();
+        // get the particle system's main module
+        mainMod = ballParticles.main;
     }
 
     void OnCollisionEnter2D (Collision2D other)
     {
-        // get the particle system's main module
-        mainMod = ballParticles.main;
-
         switch (other.gameObject.tag)
         {
             case "Earth":
@@ -48,5 +46,6 @@ public class BallParticles : MonoBehaviour
         }
 
         // FIXME: spew particles
+        ballParticles.Play();
     }
 }
