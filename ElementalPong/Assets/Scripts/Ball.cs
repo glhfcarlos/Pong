@@ -11,6 +11,10 @@ public class Ball : MonoBehaviour
     // these values are for the elemental force vector
     public Vector2 elementalForce;
 
+    // maximum and minimum ball speed
+    public float maxSpeed;
+    public float minSpeed;
+
     // the amount to add when collide with water paddle
     public float waterSpeedDeduction;
     // the amount to subtract when collide with earth paddle
@@ -50,7 +54,12 @@ public class Ball : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        //Debug.Log(_rigidbody.velocity);
+        Debug.Log(_rigidbody.velocity);
+        float xSpeed = Mathf.Abs(_rigidbody.velocity.x);
+        if (xSpeed < minSpeed)
+            MaintainMinSpeed(xSpeed);
+        else if (xSpeed > maxSpeed)
+            MaintainMaxSpeed(xSpeed);
     }
 
     void AddElementalForce(){
@@ -64,6 +73,38 @@ public class Ball : MonoBehaviour
         // add the force to the rigidbody
         _rigidbody.AddForce(elementalForce);
         //Debug.Log("Ball: " + elementalForce.ToString());
+    }
+
+    void MaintainMinSpeed(float xSpeed)
+    {
+        float dir;
+        if (whoLastHit == LastContact.P1)
+            dir = 1;
+        else
+            dir = -1;
+
+        //Debug.Log(xSpeed.ToString());
+
+        xSpeed = minSpeed * dir;
+
+        float ySpeed = _rigidbody.velocity.y;
+        _rigidbody.velocity = new Vector2(xSpeed, ySpeed);
+    }
+
+    void MaintainMaxSpeed(float xSpeed)
+    {
+        float dir;
+        if (whoLastHit == LastContact.P1)
+            dir = 1;
+        else
+            dir = -1;
+
+        //Debug.Log(xSpeed.ToString());
+
+        xSpeed = maxSpeed * dir;
+
+        float ySpeed = _rigidbody.velocity.y;
+        _rigidbody.velocity = new Vector2(xSpeed, ySpeed);
     }
 
     // handle BROKEN state

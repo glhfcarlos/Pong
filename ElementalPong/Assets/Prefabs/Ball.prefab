@@ -140,6 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialSpeed: 200
   elementalForce: {x: 0, y: 0}
+  maxSpeed: 10
+  minSpeed: 1
   waterSpeedDeduction: 100
   earthSpeedAddition: 100
   airSpeedAddition: 400
