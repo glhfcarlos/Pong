@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 9572
+  controlID: -1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 9573
+  controlID: -1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 9574
+  controlID: -1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 252.5
     height: 425.5
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 20650000
       m_LastClickedID: 0
-      m_ExpandedIDs: 008affffaa8bffffdc8bffff468dffff8e92fffff098ffff4c9affffa69bffff4e9cffffbc9cffff349dffff689dfffff49effffccbaffff8acdffff5ed1ffff38d3ffff8cd3ffffd0d3ffff24d4ffffc0d5ffff8ed8ffffa8deffff6adfffffb2dfffffdcdfffff1ee0ffff34e0ffff3ae0ffff46e0ffff32e5ffff68e5ffffcae5ffff3ce7fffff6e7ffff3ee8ffff12eaffff68eaffff7eeaffff84eaffff90eaffff24edffff00efffff30f1ffff76faffff78faffff12630000e0870000ea87000002880000149f00005c9f000092a10000
+      m_ExpandedIDs: 2477ffff0c79ffff2479ffff5679ffffca7fffffe27fffffa080ffffd280ffff0281ffff6c82ffff1086ffff4286ffff008affffaa8bffffdc8bffff468dffff8e92fffff098ffff4c9affffa69bffff4e9cffffbc9cffff349dffff689dfffff49effffccbaffff8acdffff5ed1ffff38d3ffff8cd3ffffd0d3ffff24d4ffffc0d5ffff8ed8ffffa8deffff6adfffffb2dfffffdcdfffff1ee0ffff34e0ffff3ae0ffff46e0ffff32e5ffff68e5ffffcae5ffff3ce7fffff6e7ffff3ee8ffff12eaffff68eaffff7eeaffff84eaffff90eaffff24edffff00efffff30f1ffff76faffff78faffff12630000e0870000ea87000002880000149f00005c9f000092a10000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -242,7 +242,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 330.67963, y: 233.027, z: 0.5218806}
+    m_Target: {x: -0.06409824, y: 0.06406874, z: -10.074341}
     speed: 2
-    m_Value: {x: 330.67963, y: 233.027, z: 0.5218806}
+    m_Value: {x: -0.06409824, y: 0.06406874, z: -10.074341}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 272.7514
+    m_Target: 12.124355
     speed: 2
-    m_Value: 272.7514
+    m_Value: 12.124355
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 50.5}
+    scrollPos: {x: 0, y: 104.5}
     m_SelectedIDs: 30610000
     m_LastClickedID: 24880
     m_ExpandedIDs: 00000000186100001a61000000ca9a3b
@@ -744,7 +744,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 20650000
     m_LastClickedInstanceID: 25888
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c623000088ad0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
