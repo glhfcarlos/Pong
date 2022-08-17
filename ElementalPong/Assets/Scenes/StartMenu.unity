@@ -254,9 +254,9 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 2077143614}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 417027400}
-    m_SelectOnRight: {fileID: 229664733}
+    m_SelectOnDown: {fileID: 417027400}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -386,9 +386,9 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 1915906153}
+    m_SelectOnUp: {fileID: 177315751}
     m_SelectOnDown: {fileID: 1915906153}
-    m_SelectOnLeft: {fileID: 177315751}
+    m_SelectOnLeft: {fileID: 417027400}
     m_SelectOnRight: {fileID: 417027400}
   m_Transition: 1
   m_Colors:
@@ -641,10 +641,10 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 2077143614}
+    m_SelectOnUp: {fileID: 177315751}
     m_SelectOnDown: {fileID: 2077143614}
     m_SelectOnLeft: {fileID: 229664733}
-    m_SelectOnRight: {fileID: 177315751}
+    m_SelectOnRight: {fileID: 229664733}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1365,7 +1365,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 417027400}
-    m_SelectOnDown: {fileID: 417027400}
+    m_SelectOnDown: {fileID: 177315751}
     m_SelectOnLeft: {fileID: 1915906153}
     m_SelectOnRight: {fileID: 1915906153}
   m_Transition: 1
