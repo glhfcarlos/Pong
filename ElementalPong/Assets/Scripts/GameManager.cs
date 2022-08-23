@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -127,8 +128,10 @@ public class GameManager : MonoBehaviour
         // display who won
         if (player1Paddle.score > player2Paddle.score){
             timerText.text = "Wizard Wins";
+            SceneManager.LoadScene(5);
         }else if (player2Paddle.score > player1Paddle.score){
             timerText.text = "Thief Wins";
+            SceneManager.LoadScene(6);
         }else{
             timerText.text = "Tie";
         }
