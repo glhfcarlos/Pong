@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2970434019287269471}
   - component: {fileID: 2970434019287269440}
-  - component: {fileID: 6989483359000441251}
+  - component: {fileID: 7091941349311510691}
   - component: {fileID: 3259566081095166010}
   - component: {fileID: 2970434019287269470}
   - component: {fileID: 2970434019287269468}
@@ -90,8 +90,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6989483359000441251
-BoxCollider2D:
+--- !u!70 &7091941349311510691
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,18 +104,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.24, y: 1.77}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 0.24, y: 1.77}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!114 &3259566081095166010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,7 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de49310715363242927a16088adf08f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1433807527657728691, guid: 36884630291dd47f198fdcf2452142fd, type: 3}
 --- !u!114 &2970434019287269469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,7 +624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d312433e85faf42a9424a8c809ecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1433807527657728691, guid: 36884630291dd47f198fdcf2452142fd, type: 3}
 --- !u!114 &3916264318041474750
 MonoBehaviour:
   m_ObjectHideFlags: 0
