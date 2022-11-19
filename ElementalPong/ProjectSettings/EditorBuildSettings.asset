@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThiefWins.unity
     guid: 2b56a8eef9257454fb93024e50cf84c6
+  - enabled: 1
+    path: Assets/Scenes/ControlsScene.unity
+    guid: 8bbba819aafd2ec44a69f90d8b5abf05
+  - enabled: 1
+    path: Assets/Scenes/HowToPlayScene.unity
+    guid: 47e39fecf2eba0d428196666796812e9
   m_configObjects: {}
