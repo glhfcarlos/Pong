@@ -1629,7 +1629,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2970434019287269442, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: AI
       objectReference: {fileID: 0}
     - target: {fileID: 2970434019287269471, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
       propertyPath: m_RootOrder
@@ -1675,7 +1675,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2970434019287269470, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+    - {fileID: 2970434019287269469, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+    - {fileID: 3916264318041474750, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
+    - {fileID: 2970434019287269468, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7bd6721142e4e1a4691a1aedbf7dc99b, type: 3}
 --- !u!4 &1462392594 stripped
 Transform:
@@ -2136,7 +2140,7 @@ GameObject:
   - component: {fileID: 2011623302}
   - component: {fileID: 2011623301}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
