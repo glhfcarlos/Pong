@@ -82,6 +82,13 @@ public class GameManager : MonoBehaviour
     void SpawnBall(){
         GameObject ballGO = Instantiate(ballPrefab, ballPosition.position, Quaternion.identity);
         ball = ballGO.GetComponent<Ball>();
+
+        // for AI only
+        if (player2Paddle.gameObject.GetComponent<AIController>() != null)
+        {
+            AIController ai = player2Paddle.gameObject.GetComponent<AIController>();
+            ai.ball = ballGO;
+        }
     }
 
     public void Player1Scores()

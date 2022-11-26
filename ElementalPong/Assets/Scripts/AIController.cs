@@ -19,13 +19,19 @@ public class AIController : MonoBehaviour
         // set location to player 2 spawn location
         paddle.startPosition = player2Spawn.position;
         gameObject.transform.position = paddle.startPosition;
+
+        // setup Ball tracking
+        ball = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /* Code to make AI play */
-        FollowBallY();
+        if (ball != null)
+        {
+            /* Code to make AI play */
+            FollowBallY();
+        }
     }
 
     // Move up

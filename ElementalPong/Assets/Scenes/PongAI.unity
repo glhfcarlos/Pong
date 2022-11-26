@@ -299,7 +299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1663891212}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230924531
 GameObject:
@@ -434,7 +434,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1663891212}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439467552
 GameObject:
@@ -1718,6 +1718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player2Spawn: {fileID: 2070143796}
+  ball: {fileID: 5273459465046939647, guid: ff100ddb4b6ce61429210edd3c448f57, type: 3}
 --- !u!1 &1589948731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,9 +1783,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 435114830}
   - {fileID: 14014478}
   - {fileID: 2070143796}
-  - {fileID: 435114830}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2414,5 +2415,5 @@ Transform:
   m_Children:
   - {fileID: 1462392594}
   m_Father: {fileID: 1663891212}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
