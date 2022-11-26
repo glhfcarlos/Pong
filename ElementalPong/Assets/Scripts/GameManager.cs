@@ -20,13 +20,21 @@ public class GameManager : MonoBehaviour
 
     private bool runGame;
     private bool paused;
+    private bool checkingForAll;
 
     void Awake(){
         runGame = false;
         paused = false;
+        checkingForAll = false;
     }
 
     void Update(){
+        // start game when both paddles are spawned
+        if ((player1Paddle != null) && (player2Paddle != null) && !checkingForAll){
+            // turn off flag
+            checkingForAll = true;
+            StartGame();
+        }
         // handle timer
         if (secondsLeft <= 0){
             EndGame();
@@ -55,12 +63,17 @@ public class GameManager : MonoBehaviour
         paused = false;
     }
 
-    // allows the player manager to add the scripts when players join
+    // allows the Player Manager to add the scripts when players join
     public void TrackPlayer1(PaddleUnit paddle){
         player1Paddle = paddle;
     }
     public void TrackPlayer2(PaddleUnit paddle){
         player2Paddle = paddle;
+    }
+
+    // Starts the game only when both players (or a player and AI) have joined
+    void StartGame()
+    {
         // spawns ball only when players have joined
         SpawnBall();
         // start the timer

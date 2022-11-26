@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour
 {
+    public Transform player2Spawn;
+    public GameObject ball;
+
     private SpriteRenderer sp;
     private PaddleUnit paddle;
 
@@ -13,12 +16,16 @@ public class AIController : MonoBehaviour
         // tell game that there should be a max of 1 player instead of 2
         sp = GetComponent<SpriteRenderer>();
         paddle = GetComponent<PaddleUnit>();
+        // set location to player 2 spawn location
+        paddle.startPosition = player2Spawn.position;
+        gameObject.transform.position = paddle.startPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        /* Code to make AI play */
+        FollowBallY();
     }
 
     // Move up
@@ -31,6 +38,12 @@ public class AIController : MonoBehaviour
     public void MoveDown()
     {
         paddle.SetDirection(-1.0f);
+    }
+
+    // Don't move
+    public void StopMovement()
+    {
+        paddle.SetDirection(0.0f);
     }
 
     // Uses earth power
@@ -75,5 +88,19 @@ public class AIController : MonoBehaviour
         sp.sprite = paddle.elementalSprites[3];
         // change speed to default
         paddle.SetCurrentSpeed(paddle.defaultSpeed);
+    }
+
+    // Just make paddle follow Ball's vertical position
+    public void FollowBallY()
+    {
+        // get ball's y-position
+        float ballY = ball.transform.position.y;
+
+        // get AI's x- and z-positions
+        float aiX = gameObject.transform.position.x;
+        float aiZ = gameObject.transform.position.z;
+
+        // set AI's position
+        gameObject.transform.position = new Vector3(aiX, ballY, aiZ);
     }
 }
