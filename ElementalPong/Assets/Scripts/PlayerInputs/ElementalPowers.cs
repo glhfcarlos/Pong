@@ -10,7 +10,7 @@ public class ElementalPowers : MonoBehaviour
 
     /*
         Change sprite
-        change speed (rigidbody)
+        change speed
         change tag (so ball can access it)
         access to different sprites to change object's
     */
