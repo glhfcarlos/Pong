@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HowToPlayScene.unity
     guid: 47e39fecf2eba0d428196666796812e9
+  - enabled: 1
+    path: Assets/Scenes/PongAI.unity
+    guid: 9e4da2e084c207e46b39f97a1e5dcfee
   m_configObjects: {}
