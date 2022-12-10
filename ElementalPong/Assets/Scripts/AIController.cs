@@ -109,17 +109,15 @@ public class AIController : MonoBehaviour
          * If ball is above AI, AI go up
          * Otherwise, AI go down
          */
-        if (ballY > aiY)
+        if (ballY > aiY) // above
         {
-            Debug.Log("Ball is above");
             MoveUp();
         }
-        else if (ballY < aiY)
+        else if (ballY < aiY) // below
         {
-            Debug.Log("Ball is below");
             MoveDown();
         }
-        else
+        else // level
         {
             StopMovement();
         }
