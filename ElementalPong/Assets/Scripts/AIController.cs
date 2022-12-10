@@ -102,11 +102,26 @@ public class AIController : MonoBehaviour
         // get ball's y-position
         float ballY = ball.transform.position.y;
 
-        // get AI's x- and z-positions
-        float aiX = gameObject.transform.position.x;
-        float aiZ = gameObject.transform.position.z;
+        // get AI's y-positions
+        float aiY = gameObject.transform.position.y;
 
-        // set AI's position
-        gameObject.transform.position = new Vector3(aiX, ballY, aiZ);
+        /* Set direction based on where ball is
+         * If ball is above AI, AI go up
+         * Otherwise, AI go down
+         */
+        if (ballY > aiY)
+        {
+            Debug.Log("Ball is above");
+            MoveUp();
+        }
+        else if (ballY < aiY)
+        {
+            Debug.Log("Ball is below");
+            MoveDown();
+        }
+        else
+        {
+            StopMovement();
+        }
     }
 }

@@ -54,7 +54,7 @@ public class Ball : MonoBehaviour
     }
 
     private void FixedUpdate(){
-        Debug.Log(_rigidbody.velocity);
+        //Debug.Log(_rigidbody.velocity);
         float xSpeed = Mathf.Abs(_rigidbody.velocity.x);
         if (xSpeed < minSpeed)
             MaintainMinSpeed(xSpeed);
