@@ -53,7 +53,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: TempBGM
     clip: {fileID: 8300000, guid: c2b8b67f5ae405a41b99978e091ee7e9, type: 3}
-    volume: 0.5
+    volume: 0.25
     pitch: 1
     loop: 1
     source: {fileID: 0}

@@ -22,6 +22,9 @@ public class AIController : MonoBehaviour
 
         // setup Ball tracking
         ball = null;
+
+        // start with earth power
+        UseEarth();
     }
 
     // Update is called once per frame
@@ -86,7 +89,7 @@ public class AIController : MonoBehaviour
     }
 
     // Use fire power
-    public void EquipFire()
+    public void UseFire()
     {
         // change tag
         gameObject.tag = "Fire";
