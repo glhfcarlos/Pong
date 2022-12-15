@@ -95,6 +95,8 @@ public class ElementalPowers : MonoBehaviour
             sp.sprite = paddle.elementalSprites[2];
             // change speed to default
             paddle.SetCurrentSpeed(paddle.defaultSpeed);
+            // play collision sound
+            FindObjectOfType<AudioManager>().Play("AirPower");
         }
     }
 
