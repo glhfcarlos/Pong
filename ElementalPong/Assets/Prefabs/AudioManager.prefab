@@ -57,3 +57,9 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: AirPower
+    clip: {fileID: 8300000, guid: 1947bd740c7584b4a990ca1d803cf269, type: 3}
+    volume: 0.25
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}

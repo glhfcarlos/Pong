@@ -178,6 +178,8 @@ public class Ball : MonoBehaviour
                 //Debug.Log("water");
                 break;
             case "Air": // a spike
+                // play collision sound
+                FindObjectOfType<AudioManager>().Play("AirPower");
                 // add no y movement to elemental force
                 elementalForce.y = 0.0f;
                 // set x direction as opposite of x direction before collision
