@@ -120,6 +120,6 @@ MonoBehaviour:
   - name: ThiefWin
     clip: {fileID: 8300000, guid: 1a98b37757e6aaa4f99eb6713ca59ef4, type: 3}
     volume: 0.25
-    pitch: 2
+    pitch: 1.75
     loop: 0
     source: {fileID: 0}

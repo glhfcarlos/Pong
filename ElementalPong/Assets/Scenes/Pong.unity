@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a05fac519e54bec801a1c76cd17683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsLeft: 120
+  secondsLeft: 10
   ballPosition: {fileID: 1316003528}
   player1ScoreText: {fileID: 2126424570}
   player2ScoreText: {fileID: 1346600192}
