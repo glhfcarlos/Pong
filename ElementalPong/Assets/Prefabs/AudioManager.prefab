@@ -61,13 +61,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: eb86aaf642e213d418b1ee790b423e12, type: 3}
     volume: 0.25
     pitch: 2
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: GameBGM
     clip: {fileID: 8300000, guid: 0cb6dd4a5861cf64d87a563a4d0bdb98, type: 3}
-    volume: 0.25
+    volume: 0.05
     pitch: 2
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: AirPower
     clip: {fileID: 8300000, guid: 1947bd740c7584b4a990ca1d803cf269, type: 3}

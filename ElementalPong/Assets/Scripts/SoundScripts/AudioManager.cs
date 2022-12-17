@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
     }
     void Start(){
         // play game's BGM here
-        Play("TempBGM");
+        Play("BeginningBGM");
     }
 
     // Update is called once per frame
@@ -45,5 +45,18 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    // Update is called once per frame
+    public void Stop(string name)
+    {
+        //Debug.Log("playing sound");
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found.");
+            return;
+        }
+        s.source.Stop();
     }
 }

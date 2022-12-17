@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
         runGame = false;
         paused = false;
         checkingForAll = false;
+
+        // Stop menu BGM and start game BGM
+        FindObjectOfType<AudioManager>().Stop("BeginningBGM");
+        FindObjectOfType<AudioManager>().Play("GameBGM");
     }
 
     void Update(){
@@ -141,15 +145,26 @@ public class GameManager : MonoBehaviour
         */
         // destroy the ball
         ball.StopMovement();
+
+        Scene scene = SceneManager.GetActiveScene();
+
         // switch player action maps to UI
         player1Paddle.ChangeInputMap("UI");
-        player2Paddle.ChangeInputMap("UI");
+        // Only switch player 2's action map if not an AI
+        if (scene.name == "Pong")
+        {
+            player2Paddle.ChangeInputMap("UI");
+        }
 
         // display who won
-        if (player1Paddle.score > player2Paddle.score){
+        if (player1Paddle.score > player2Paddle.score)
+        {
             timerText.text = "Wizard Wins";
             SceneManager.LoadScene(5);
-        }else if (player2Paddle.score > player1Paddle.score){
+        }else if (player2Paddle.score > player1Paddle.score)
+        {
+            // play collision sound
+            FindObjectOfType<AudioManager>().Play("ThiefWin");
             timerText.text = "Thief Wins";
             SceneManager.LoadScene(6);
         }else{
