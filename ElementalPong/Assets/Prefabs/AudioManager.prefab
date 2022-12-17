@@ -78,25 +78,25 @@ MonoBehaviour:
   - name: FirePower
     clip: {fileID: 8300000, guid: 53f6a2651935fc34ca654a249780ec71, type: 3}
     volume: 0.25
-    pitch: 2
+    pitch: 3
     loop: 0
     source: {fileID: 0}
   - name: WaterPower
     clip: {fileID: 8300000, guid: 7fd5726fad77da443920a26d15acbdd2, type: 3}
-    volume: 0.25
-    pitch: 2
+    volume: 0.75
+    pitch: 3
     loop: 0
     source: {fileID: 0}
   - name: EarthPower
     clip: {fileID: 8300000, guid: 272d48e67bf300f4297d3e27773aae1e, type: 3}
     volume: 0.25
-    pitch: 1
+    pitch: 1.25
     loop: 0
     source: {fileID: 0}
   - name: OrbCrack
     clip: {fileID: 8300000, guid: 89cb17de57ba815418c820b47dffd3df, type: 3}
     volume: 0.25
-    pitch: 2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: MenuScroll

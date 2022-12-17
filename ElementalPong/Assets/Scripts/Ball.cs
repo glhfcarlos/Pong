@@ -212,6 +212,8 @@ public class Ball : MonoBehaviour
                     Debug.Log("broken");
                     HandleBrokenState();
                 }
+                // play collision sound
+                FindObjectOfType<AudioManager>().Play("OrbCrack");
                 break;
             default:
                 // do nothing
