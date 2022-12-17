@@ -32,10 +32,10 @@ public class AudioManager : MonoBehaviour
     }
     void Start(){
         // play game's BGM here
-        Play("TempBGM");
+        Play("BeginningBGM");
     }
 
-    // Update is called once per frame
+    // Call to play a given sound
     public void Play(string name)
     {
         //Debug.Log("playing sound");
@@ -45,5 +45,18 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    // Call to stop a given sound (mostly for looping sounds)
+    public void Stop(string name)
+    {
+        //Debug.Log("playing sound");
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found.");
+            return;
+        }
+        s.source.Stop();
     }
 }

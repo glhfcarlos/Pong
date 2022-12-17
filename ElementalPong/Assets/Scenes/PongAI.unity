@@ -1719,9 +1719,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player2Spawn: {fileID: 2070143796}
   ball: {fileID: 5273459465046939647, guid: ff100ddb4b6ce61429210edd3c448f57, type: 3}
-  earthSpeed: 5
-  regularSpeed: 10
-  waterSpeed: 15
 --- !u!1 &1589948731
 GameObject:
   m_ObjectHideFlags: 0
