@@ -130,7 +130,7 @@ public class Ball : MonoBehaviour
     {
         // play collision sound
         FindObjectOfType<AudioManager>().Play("BallCollision");
-        
+
         //bool applyPaddleDirection = true;
 
         // save who hit the ball
@@ -148,6 +148,8 @@ public class Ball : MonoBehaviour
         // check tag on paddle
         switch(other.gameObject.tag){
             case "Earth":
+                // play collision sound
+                FindObjectOfType<AudioManager>().Play("EarthPower");
                 // set x direction
                 if (whoLastHit == LastContact.P1){
                     elementalForce.x = 1 * earthSpeedAddition;
@@ -159,6 +161,8 @@ public class Ball : MonoBehaviour
                 //Debug.Log("earth");
                 break;
             case "Water":
+                // play collision sound
+                FindObjectOfType<AudioManager>().Play("WaterPower");
                 // if normal interaction, decrease speed
                 if (state == BallStates.WHOLE){
                     // set x direction as opposite of x direction before collision
@@ -192,6 +196,8 @@ public class Ball : MonoBehaviour
                 airForce = true;
                 break;
             case "Fire":
+                // play collision sound
+                FindObjectOfType<AudioManager>().Play("FirePower");
                 // reset the elemental force, it won't be used here
                 elementalForce = Vector2.zero;
                 // if normal interaction, crack
