@@ -128,7 +128,7 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // play collision sound
+        // play wall collision sound
         FindObjectOfType<AudioManager>().Play("BallCollision");
 
         //bool applyPaddleDirection = true;
@@ -148,7 +148,7 @@ public class Ball : MonoBehaviour
         // check tag on paddle
         switch(other.gameObject.tag){
             case "Earth":
-                // play collision sound
+                // play earth power SFX
                 FindObjectOfType<AudioManager>().Play("EarthPower");
                 // set x direction
                 if (whoLastHit == LastContact.P1){
@@ -161,7 +161,7 @@ public class Ball : MonoBehaviour
                 //Debug.Log("earth");
                 break;
             case "Water":
-                // play collision sound
+                // play water power SFX
                 FindObjectOfType<AudioManager>().Play("WaterPower");
                 // if normal interaction, decrease speed
                 if (state == BallStates.WHOLE){
@@ -175,6 +175,8 @@ public class Ball : MonoBehaviour
                     elementalForce.y = Mathf.Sign(_rigidbody.velocity.y) * waterSpeedDeduction;
                 // if interacting as cracked ball, break
                 }else if (state == BallStates.CRACKED){
+                    // play orb crack SFX
+                    FindObjectOfType<AudioManager>().Play("OrbCrack");
                     state = BallStates.BROKEN;
                     Debug.Log("broken");
                     HandleBrokenState();
@@ -182,7 +184,7 @@ public class Ball : MonoBehaviour
                 //Debug.Log("water");
                 break;
             case "Air": // a spike
-                // play collision sound
+                // play air power SFX
                 FindObjectOfType<AudioManager>().Play("AirPower");
                 // add no y movement to elemental force
                 elementalForce.y = 0.0f;
@@ -196,7 +198,7 @@ public class Ball : MonoBehaviour
                 airForce = true;
                 break;
             case "Fire":
-                // play collision sound
+                // play fire power SFX
                 FindObjectOfType<AudioManager>().Play("FirePower");
                 // reset the elemental force, it won't be used here
                 elementalForce = Vector2.zero;
@@ -212,7 +214,7 @@ public class Ball : MonoBehaviour
                     Debug.Log("broken");
                     HandleBrokenState();
                 }
-                // play collision sound
+                // play orb crack SFX
                 FindObjectOfType<AudioManager>().Play("OrbCrack");
                 break;
             default:

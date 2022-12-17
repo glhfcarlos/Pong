@@ -159,16 +159,19 @@ public class GameManager : MonoBehaviour
         // display who won
         if (player1Paddle.score > player2Paddle.score)
         {
-            // play collision sound
+            // stop game music
             FindObjectOfType<AudioManager>().Stop("GameBGM");
+            // start menu music
             FindObjectOfType<AudioManager>().Play("BeginningBGM");
             timerText.text = "Wizard Wins";
             SceneManager.LoadScene(5);
         }else if (player2Paddle.score > player1Paddle.score)
         {
-            // play collision sound
+            // stop game music
             FindObjectOfType<AudioManager>().Stop("GameBGM");
+            // play thief win sound
             FindObjectOfType<AudioManager>().Play("ThiefWin");
+            // start menu music
             FindObjectOfType<AudioManager>().Play("BeginningBGM");
             timerText.text = "Thief Wins";
             SceneManager.LoadScene(6);

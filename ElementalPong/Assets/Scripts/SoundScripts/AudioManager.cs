@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
         Play("BeginningBGM");
     }
 
-    // Update is called once per frame
+    // Call to play a given sound
     public void Play(string name)
     {
         //Debug.Log("playing sound");
@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    // Update is called once per frame
+    // Call to stop a given sound (mostly for looping sounds)
     public void Stop(string name)
     {
         //Debug.Log("playing sound");
