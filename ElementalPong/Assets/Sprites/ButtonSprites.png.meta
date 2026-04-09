@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ButtonSprites_Controls
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 662
+        width: 460
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141786ba20ca1baa59e8c3f85918ac58
+      internalID: -784335605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonSprites_Start
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 662
+        width: 460
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a00cd621a663a47a9011129f2e600f
+      internalID: 477189148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonSprites_How-To
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 662
+        width: 460
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746cbfd901944646a8e279dcbac014a0
+      internalID: 1218594538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonSprites_Quit
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 345
+        width: 460
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a3bc94ab6d1af0ab8443b736732197
+      internalID: 866730601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonSprites_Resume
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 345
+        width: 460
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fbcb196e64de086d8234a1b572a5e95
+      internalID: 448242439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ButtonSprites_Credits
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 345
+        width: 460
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfea61ee3fab5a0f0bac1006fca33841
+      internalID: -788574669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ButtonSprites_Controls: -784335605
+      ButtonSprites_Credits: -788574669
+      ButtonSprites_How-To: 1218594538
+      ButtonSprites_Quit: 866730601
+      ButtonSprites_Resume: 448242439
+      ButtonSprites_Start: 477189148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
