@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ResumeButton;
     public GameObject HomeButton;
     public static PauseMenu instance;
+    public int homeSceneID;
 
     void Awake()
     {
@@ -31,9 +32,9 @@ public class PauseMenu : MonoBehaviour
         HomeButton.SetActive(false);
         Time.timeScale = 1f;
     }
-    public void Home(int sceneID)
+    public void Home()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(homeSceneID);
     }
 }
